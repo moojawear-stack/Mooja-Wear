@@ -75,23 +75,40 @@ footer p{font-size:11px;margin-top:9px}
 <p>MOOJA WEAR is for those who move differently, think boldly and wear their identity with pride. Streetwear is more than a look. It's a mindset.</p>
 <a class="btn" href="https://www.instagram.com/mooja_wear_?vrfl=aTJlbXU3azFsdm40&utm_source=qr/" >FOLLOW THE MOVEMENT↗ </a>
 </div>
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>Feel free to reach out to me through any of the channels below:</p>
-  <ul>
-    <!-- Email Link (opens the user's email client automatically) -->
-    <li>EMAIL: <a href="mailto:moojawear@gmail.com">moojawear@gmail.com</a></li>
+<section id="contact-form-section">
+  <h2>Send Me a Message</h2>
+  
+  <!-- Replace YOUR_EMAIL@EXTERNAL.COM with your actual email address -->
+  <form action="https://formsubmit.co" method="POST">
     
-    <!-- Phone Link -->
-    <li>WHATSAPP: <a href="https://wa.me/message/RHC5P2MWVUBEG1">+2799900900</a></li>
+    <!-- Auto-redirect to a thank you page (Optional) -->
+    <input type="hidden" name="_next" value="https://github.io">
     
-    <!-- LinkedIn or Social Media -->
-    <li>FACEBOOK: <a href="https://www.facebook.com/share/194uHYnwRV/?mibextid=wwXIfr" target="_blank">:@moojawear</a></li>
+    <!-- Anti-spam honeypot field -->
+    <input type="text" name="_honey" style="display:none">
+
+    <div>
+      <label for="name">Name:</label><br>
+      <input type="text" name="name" id="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+    </div>
+
+    <div>
+      <label for="email">Email Address:</label><br>
+      <input type="email" name="email" id="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+    </div>
+
+    <div>
+      <label for="message">Message:</label><br>
+      <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea>
+    </div>
+
+    <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+      Send Message
+    </button>
     
-    <li>TIKTOK: <a href="https://www.tiktok.com/@mooja_wear?_r=1&_t=ZS-9AQGdxUmFwA" target="_blank">:@moojawear</a></li>
-    
-   <li>INSTAGRAM: <a href="https://www.instagram.com/mooja_wear_?obrf=aTJlbXU3azFsdm40&utm_source=qr" target="_blank">:@moojawear</a></li>
-  </ul>
+  </form>
+</section>
+
 </section>
 
 </section>
