@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOOJA WEAR | Streetwear</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f4f1e9;color:#151515;font-family:Arial,Helvetica,sans-serif}
+header{background:#111;color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.logo{font-size:25px;font-weight:1000;letter-spacing:-1.5px}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:12px;font-weight:bold}
+.hero{background:#c9ff38;padding:65px 7% 55px;position:relative;overflow:hidden}
+.tag{font-size:12px;font-weight:900;letter-spacing:3px}
+h1{font-size:clamp(58px,13vw,130px);line-height:.83;letter-spacing:-8px;font-weight:1000;margin:28px 0}
+.hero p{font-size:15px;max-width:300px;line-height:1.6}
+.btn{display:inline-block;background:#111;color:white;padding:16px 23px;text-decoration:none;font-weight:900;font-size:12px;margin-top:25px}
+.stamp{font-size:65px;font-weight:1000;position:absolute;right:7%;bottom:35px;transform:rotate(-12deg);border:5px solid #111;border-radius:50%;padding:15px}
+.strip{background:#111;color:#c9ff38;padding:13px;text-align:center;font-weight:900;letter-spacing:3px;font-size:12px}
+section{padding:50px 6%}
+.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}
+h2{font-size:35px;font-weight:1000;letter-spacing:-2px}
+.heading span{font-size:11px;font-weight:bold}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.product{min-width:0}
+.photo{aspect-ratio:4/5;background:#dedbd2;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover}
+.label{position:absolute;left:10px;top:10px;background:#c9ff38;padding:7px;font-size:10px;font-weight:900}
+.info{padding:12px 0}
+.info h3{font-size:14px;font-weight:900}
+.info p{font-size:12px;color:#666;margin-top:6px}
+.price{font-weight:900;margin-top:8px;font-size:14px}
+.about{background:#151515;color:#f4f1e9}
+.about h2{font-size:clamp(38px,8vw,75px);line-height:.95;margin:18px 0}
+.about p{line-height:1.8;max-width:450px;font-size:14px;color:#ccc}
+footer{background:#c9ff38;padding:28px 6%;font-weight:900}
+footer p{font-size:11px;margin-top:9px}
+@media(min-width:700px){.hero{padding-top:100px;padding-bottom:100px}.products{grid-template-columns:repeat(4,minmax(0,1fr))}section{padding:75px 7%}h1{max-width:850px}.stamp{font-size:85px}}
+@media(max-width:380px){nav a{margin-left:8px;font-size:10px}.logo{font-size:21px}.stamp{font-size:35px;border-width:3px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MOOJA®</div>
+<nav><a href="#shop">SHOP</a><a href="#about">OUR STORY</a></nav>
+</header>
+<main>
+<div class="hero">
+<div class="tag">INDEPENDENT STREETWEAR · SA</div>
+<h1>WEAR<br>YOUR<br>WORLD.</h1>
+<p>Not made to fit in. Built to stand out. Discover the next wave of MOOJA WEAR.</p>
+<a class="btn" href="#shop">EXPLORE THE DROP ↘</a>
+<div class="stamp">MW®</div>
+</div>
+<div class="strip">BOLD BY NATURE · STREET BY CULTURE · MOOJA WEAR</div>
+<section id="shop">
+<div class="heading"><h2>THE DROP.</h2><span>YOUR STREET. YOUR RULES.</span></div>
+<div class="products">
+<article class="product"><div class="photo"><span class="label">01 / ESSENTIAL</span><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85" alt="White T-shirt"></div><div class="info"><h3>Oversized Essential Tee</h3><p>Relaxed fit · White</p><div class="price">Price coming soon</div></div></article>
+<article class="product"><div class="photo"><span class="label">02 / STREET</span><img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85" alt="Streetwear T-shirt"></div><div class="info"><h3>Street Culture Tee</h3><p>Urban fit · Everyday wear</p><div class="price">Price coming soon</div></div></article>
+<article class="product"><div class="photo"><span class="label">03 / CORE</span><img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=700&q=85" alt="Casual streetwear"></div><div class="info"><h3>Daily Uniform Tee</h3><p>Relaxed fit · Casual</p><div class="price">Price coming soon</div></div></article>
+<article class="product"><div class="photo"><span class="label">04 / NEXT</span><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=85" alt="Fashion T-shirt"></div><div class="info"><h3>Next Wave Tee</h3><p>Street essentials</p><div class="price">Price coming soon</div></div></article>
+</div>
+</section>
+<section class="about" id="about">
+<div class="tag">MORE THAN CLOTHING.</div>
+<h2>THIS IS<br>YOUR<br>STATEMENT.</h2>
+<p>MOOJA WEAR is for those who move differently, think boldly and wear their identity with pride. Streetwear is more than a look. It's a mindset.</p>
+<a class="btn" href="https://www.instagram.com/">FOLLOW THE MOVEMENT ↗</a>
+</section>
+</main>
+<footer>
+<div class="logo">MOOJA WEAR®</div>
+<p>OWN YOUR STYLE. MAKE YOUR MARK.</p>
+<p>© 2026 MOOJA WEAR. ALL RIGHTS RESERVED.</p>
+</footer>
+</body>
+</html>
