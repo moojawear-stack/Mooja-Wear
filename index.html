@@ -7,6 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MOOJA WEAR | Streetwear</title>
 <style>
+/* Custom slide-out panel layout animation rules */
+#cart-drawer {
+  transition: right 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+/* Style adjustments to make the custom shopping count badge look round and clean */
+#cart-count {
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#f4f1e9;color:#151515;font-family:Arial,Helvetica,sans-serif}
 header{background:#111;color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px}
@@ -48,6 +61,106 @@ footer p{font-size:11px;margin-top:9px}
 </head>
 <body>
 <header>
+  <script>
+// State Management Array initialization pulling stored local variables
+var cart = JSON.parse(localStorage.getItem('mooja_cart')) || [];
+
+function toggleCart() {
+  var drawer = document.getElementById('cart-drawer');
+  if (drawer.style.right === "0px") {
+    drawer.style.right = "-400px";
+  } else {
+    drawer.style.right = "0px";
+    renderCart();
+  }
+}
+
+function addToCart(name, price, id) {
+  var size = document.getElementById('size-select-' + id).value;
+  var color = document.getElementById('color-select-' + id).value;
+  
+  // Combine items to verify unique product parameters configurations
+  var itemKey = name + '-' + size + '-' + color;
+  
+  var existingItem = cart.find(item => item.key === itemKey);
+  if (existingItem) {
+    existingItem.qty += 1;
+  } else {
+    cart.push({ key: itemKey, name: name, price: price, size: size, color: color, qty: 1 });
+  }
+  
+  saveAndSyncCart();
+  toggleCart(); // Slide cart drawer wide open to confirm item success feedback
+}
+
+function removeItem(key) {
+  cart = cart.filter(item => item.key !== key);
+  saveAndSyncCart();
+  renderCart();
+}
+
+function saveAndSyncCart() {
+  localStorage.setItem('mooja_cart', JSON.stringify(cart));
+  // Total global badge quantity counter tracking logic configuration updates
+  var totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+  document.getElementById('cart-count').innerText = totalCount;
+}
+
+function renderCart() {
+  var listContainer = document.getElementById('cart-items-list');
+  var totalContainer = document.getElementById('cart-total-display');
+  
+  if (cart.length === 0) {
+    listContainer.innerHTML = '<p style="color:#777; text-align:center; margin-top:20px;">Your bag is currently empty.</p>';
+    totalContainer.innerText = "R0.00";
+    return;
+  }
+  
+  var html = "";
+  var grandTotal = 0;
+  
+  cart.forEach(item => {
+    var lineTotal = item.price * item.qty;
+    grandTotal += lineTotal;
+    
+    html += `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; border-bottom:1px solid #f2f2f2; padding-bottom:15px;">
+        <div>
+          <h4 style="margin:0 0 4px 0; font-size:0.95rem; color:#000;">${item.name}</h4>
+          <p style="margin:0 0 4px 0; font-size:0.8rem; color:#666;">Size: ${item.size} | Color: ${item.color}</p>
+          <p style="margin:0; font-size:0.85rem; font-weight:bold;">${item.qty}x R${item.price.toFixed(2)}</p>
+        </div>
+        <i class="fas fa-trash-alt" onclick="removeItem('${item.key}')" style="color:#cc0000; cursor:pointer; font-size:0.9rem;"></i>
+      </div>
+    `;
+  });
+  
+  listContainer.innerHTML = html;
+  totalContainer.innerText = "R" + grandTotal.toFixed(2);
+}
+
+function checkoutToWhatsApp() {
+  if (cart.length === 0) return alert("Your cart is empty!");
+  
+  var phoneNumber = "YOUR_WHATSAPP_NUMBER"; // Replace with your real business mobile details string configuration format
+  var message = "Hi Mooja Wear! I would like to place an order:\n\n";
+  var grandTotal = 0;
+  
+  cart.forEach(item => {
+    var lineTotal = item.price * item.qty;
+    grandTotal += lineTotal;
+    message += "- " + item.qty + "x " + item.name + " (" + item.size + " / " + item.color + ") - R" + lineTotal.toFixed(2) + "\n";
+  });
+  
+  message += "\nTotal Bill: R" + grandTotal.toFixed(2);
+  
+  window.open("https://wa.me" + phoneNumber + "?text=" + encodeURIComponent(message), "_blank");
+}
+
+// Initial running script loop synchronization execution on client environment reload loop configuration setups
+saveAndSyncCart();
+</script>
+
 <div class="logo">
   <img src="mooja-logo.png" alt="MOOJA WEAR logo">
 </div>
