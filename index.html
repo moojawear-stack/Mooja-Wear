@@ -80,33 +80,33 @@ footer p{font-size:11px;margin-top:9px}
         <div style="margin-bottom: 15px; display: flex; gap: 10px; justify-content: center;">
           
           <!-- Size Dropdown -->
-          <div style="flex: 1; text-align: left;">
-            <label for="size-select-1" style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: #666; display: block; margin-bottom: 4px;">Size</label>
-            <select id="size-select-1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 0.85rem; font-family: sans-serif;">
-              <option value="S">S</option>
-              <option value="M" selected>M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-            </select>
-          </div>
+<div style="flex: 1; text-align: left;">
+  <label for="size-select-1" style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: #666; display: block; margin-bottom: 4px;">Size</label>
+  <!-- Added id="size-select-1" -->
+  <select id="size-select-1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 0.85rem; font-family: sans-serif;">
+    <option value="S">S</option>
+    <option value="M" selected>M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+  </select>
+</div>
 
-          <!-- Color Dropdown -->
-          <div style="flex: 1; text-align: left;">
-            <label for="color-select-1" style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: #666; display: block; margin-bottom: 4px;">Color</label>
-            <select id="color-select-1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 0.85rem; font-family: sans-serif;">
-              <option value="Brown">Chocolate Brown</option>
-              <option value="Black"> Black</option>
-              <option value="White">White</option>
-               <option value="Beige">Beige</option>
-               <option value="Grey">Dark Grey</option>
-               <option value="Pink">Pink</option>
-            </select>
-          </div>
+<!-- Color Dropdown -->
+<div style="flex: 1; text-align: left;">
+  <label for="color-select-1" style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: #666; display: block; margin-bottom: 4px;">Color</label>
+  <!-- Added id="color-select-1" -->
+  <select id="color-select-1" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 0.85rem; font-family: sans-serif;">
+    <option value="Chocolate Brown">Chocolate Brown</option>
+    <option value="Core Black">Core Black</option>
+    <option value="Off-White">Off-White</option>
+  </select>
+</div>
 
-        </div>
-
-      </div>
-      <a href="https://wa.me/message/RHC5P2MWVUBEG1" target="_blank" style="display: block; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; padding: 12px 0; border-radius: 4px; letter-spacing: 1px;">Buy Now</a>
+<!-- Buy Now Button -->
+<!-- Change <a> to a <button> tag with onclick attribute -->
+<button onclick="sendOrder(1, 'African Streetwear')" style="display: block; width: 100%; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; padding: 12px 0; border-radius: 4px; letter-spacing: 1px; border: none; cursor: pointer; margin-top: 15px;">
+  Buy Now
+</button>
     </div>
 
     <!-- Product 2 -->
