@@ -655,6 +655,36 @@ saveAndSyncCart();
 <p>OWN YOUR STYLE. MAKE YOUR MARK.</p>
 <p>© 2026 MOOJA WEAR. ALL RIGHTS RESERVED.</p>
 </footer>
-  Scroll to the very bottom of index.html, just before the closing </body> tag.
+  
+<script>
+(function () {
+  const sizeSelect = document.getElementById('size-select-1');
+  const colorSelect = document.getElementById('color-select-1');
+  const orderButton = document.getElementById('whatsapp-order-1');
+
+  if (!sizeSelect || !colorSelect || !orderButton) return;
+
+  function updateWhatsAppOrder() {
+    const size = sizeSelect.value;
+    const color = colorSelect.options[colorSelect.selectedIndex].text;
+
+    const message =
+      'Hi MOOJA WEAR! I want to order the African Streetwear T-shirt.' +
+      '\nSize: ' + size +
+      '\nColor: ' + color +
+      '\nPrice: R499.99';
+
+    orderButton.href =
+      'https://wa.me/27799900900?text=' +
+      encodeURIComponent(message);
+  }
+
+  sizeSelect.addEventListener('change', updateWhatsAppOrder);
+  colorSelect.addEventListener('change', updateWhatsAppOrder);
+
+  updateWhatsAppOrder();
+})();
+</script>
+
 </body>
 </html>
