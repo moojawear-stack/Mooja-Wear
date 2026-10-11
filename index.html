@@ -21,6 +21,51 @@
 </div>
 
 <style>
+/* Announcement Bar Container */
+.announcement-bar {
+  background-color: #cbbba3; /* Matches your premium tan/gold brand color */
+  color: #1a1a1a;            /* Clean, readable dark charcoal text */
+  text-transform: uppercase;
+  font-family: sans-serif;   /* Replace with your exact theme font if needed */
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 10px 0;
+  overflow: hidden;          /* Hides text that moves outside the screen */
+  position: relative;
+  width: 100%;
+}
+
+/* The Track that Holds the Text */
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+/* The Animated Content Loop */
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  gap: 40px;                 /* Adjust spacing between your slogans */
+  padding-right: 40px;
+  animation: scroll-left 25s linear infinite; /* Adjust '25s' to speed up or slow down */
+}
+
+/* Pause the scroll when a customer hovers over it */
+.announcement-bar:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* The Smooth Scrolling Animation Logic */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Seamless loop point */
+  }
+}
+
 :root {
   --bg: #f8f6f0;
   --text: #211a17;
