@@ -57,6 +57,147 @@ footer p{font-size:11px;margin-top:9px}
   height: auto;
   display: block;
 }
+  
+/* MOOJA WEAR - PREMIUM DESIGN UPGRADE */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f4ed;
+  color: #151515;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+nav a {
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: #c9ff38;
+}
+
+.hero {
+  padding: 80px 6% 90px;
+}
+
+.hero h1 {
+  max-width: 900px;
+  font-size: clamp(48px, 10vw, 100px);
+  line-height: 0.92;
+  letter-spacing: -4px;
+}
+
+.btn {
+  transition: transform 0.25s ease,
+              background 0.25s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #252525;
+}
+
+section {
+  padding: 60px 6%;
+}
+
+.products {
+  gap: 24px;
+}
+
+.product {
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+.photo {
+  background: #eeebe3;
+  overflow: hidden;
+}
+
+.photo img {
+  transition: transform 0.4s ease;
+}
+
+.product:hover .photo img {
+  transform: scale(1.04);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+footer {
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 60px 7% 65px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 76px);
+    letter-spacing: -3px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .products {
+    gap: 12px;
+  }
+
+  .product {
+    border-radius: 4px;
+  }
+}
+
 </style>
 </head>
 <body>
