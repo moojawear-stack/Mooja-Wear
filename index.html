@@ -304,7 +304,7 @@
         // Prioritize only the first two visible cards; defer the rest for mobile performance.
         image.loading = position < 2 ? "eager" : "lazy";
         if (position === 0) image.fetchPriority = "high";
-        image.onerror = () => { image.onerror = null; image.src = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=75"; };
+        image.onerror = () => { image.onerror = null; image.src = "Inno.png"; };
         const tags = document.createElement("div"); tags.className = "product-tags";
         if (product.isNew) { const tag = document.createElement("span"); tag.className = "tag"; tag.textContent = "Just dropped"; tags.appendChild(tag); }
         if (product.salePrice) { const tag = document.createElement("span"); tag.className = "tag sale"; tag.textContent = "Promo"; tags.appendChild(tag); }
