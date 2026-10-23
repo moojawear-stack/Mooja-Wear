@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b0a">
+  <meta name="theme-color" content="#dceff7">
   <meta name="description" content="Mooja Wear — luxury streetwear rooted in Venda. Shop the collection, enquire about Lay-Buy and order via WhatsApp.">
   <title>Mooja Wear | Luxury Streetwear from Venda</title>
   <style>
@@ -138,6 +138,95 @@
     .shoutout-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
     .shoutout-actions .button{min-width:190px}
     @media(max-width:650px){.shoutout{padding:54px 0}.shoutout-inner{padding:0 20px}.shoutout h2{letter-spacing:-.8px}.shoutout-manifesto{line-height:1.8}}
+
+  
+
+    /* Mooja Wear soft icy blue / beige / pink palette refresh */
+    :root{--site-primary:#111111;--site-secondary:#dceff7;--site-background:#ffffff;--site-on-primary:#ffffff;--site-on-secondary:#111111;--site-on-background:#111111;--ink:#171717;--paper:#ffffff;--white:#ffffff;--forest:#111111;--gold:#dceff7;--brown:#e8d9c4;--muted:#66666a;--line:#e6e1dc;--red:#f1c5d2}
+    body{background:#fff;color:#171717}
+    .announcement{background:#dceff7;color:#111}
+    .site-header{background:rgba(255,255,255,.97);border-bottom:1px solid #e6e1dc;color:#171717}
+    .nav a:hover,.eyebrow{color:#4d7589}
+    .header-cta,.button{background:#111;border-color:#111;color:#fff}
+    .button:hover,.header-cta:hover{background:#343434;color:#fff}
+    .button.outline{background:transparent;border-color:#111;color:#111}
+    .menu-toggle{border-color:#d6d2cd;color:#111}
+    .hero h1{color:#111}
+    .hero h1 em{color:#6c9bb1}
+    .hero-copy p,.hero-meta{color:#5d5d60}
+    .campaign-frame{background:#e8d9c4;border:1px solid #e6e1dc}
+    .campaign-stamp{background:#f4c6d4;color:#111}
+    .ticker{background:#111;color:#fff}
+    .ticker b{color:#dceff7}
+    .collection{background:#fff;border-color:#e6e1dc}
+    .section-top p,.story-copy p,.laybuy-copy p,.order-copy p,.bullets{color:#66666a}
+    .filters .filter{border-color:#d9d5d0;color:#222;background:#fff}
+    .filter[aria-pressed=true],.switcher button[aria-pressed=true]{background:#dceff7;border-color:#dceff7;color:#111}
+    .product{background:#fff;border-color:#e7e2dd}
+    .product-photo{background:#f1eee9}
+    .product-photo>img{background:#f1eee9}
+    .tag{background:#111;color:#fff}
+    .tag.sale{background:#f4c6d4;color:#111}
+    .switcher button{background:#fff;border-color:#e0dcd7;color:#222}
+    .product h3,.price{color:#171717}
+    .product-info p,.section-note{color:#66666a}
+    .product-order{border-color:#111;color:#111;background:#fff}
+    .product-order:hover{background:#111;color:#fff}
+    .statement{background:#111;color:#fff;border-block:1px solid #111}
+    .statement .eyebrow{color:#dceff7}
+    .statement p{color:#e3e3e3}
+    .laybuy{background:#f4eee5;border-block:1px solid #e8dfd4}
+    .form-card{background:#fff;border-color:#e6e1dc}
+    .field label{color:#222}
+    .field input,.field select,.field textarea{background:#fff;border-color:#d9d5d0;color:#171717}
+    .field input::placeholder,.field textarea::placeholder{color:#888}
+    .total{border-color:#e6e1dc;color:#222}
+    .total strong{color:#5d91a8}
+    .form-submit{background:#f4c6d4;color:#111}
+    .form-submit:hover{background:#eaaec1}
+    .fine-print{color:#66666a}
+    .payfast-note{background:#f7f0e8;border-color:#e8d9c4;color:#333}
+    footer{background:#111;border-top:1px solid #111}
+    .footer-brand .eyebrow,.footer-label{color:#dceff7}
+    .socials a{border-color:#777;color:#fff}
+    .socials a:hover{border-color:#f4c6d4;background:#f4c6d4;color:#111}
+    .copyright{border-color:#444;color:#c8c8c8}
+    .floating-whatsapp{background:#dceff7;color:#111;border:1px solid #bad9e7}
+    .story-card{background:#e8d9c4}
+    .story-card span{background:rgba(17,17,17,.88);border-left:2px solid #f4c6d4}
+    .shoutout{background:#f8f5f1;border-color:#e6e1dc;color:#171717}
+    .shoutout .eyebrow{color:#4d7589}
+    .shoutout h2 em{color:#6c9bb1}
+    .shoutout p{color:#55555a}
+    .shoutout-manifesto{color:#5b7180}
+    .cart-button{border-color:#b7d9e7;background:#fff;color:#111}
+    .cart-count{background:#dceff7;color:#111}
+    .cart-drawer{background:#fff;color:#171717;border-left:1px solid #e6e1dc}
+    .cart-head,.cart-foot,.cart-item{border-color:#e6e1dc}
+    .cart-close,.cart-item-controls button{border-color:#d9d5d0;background:#fff;color:#171717}
+    .cart-empty,.cart-item-meta,.cart-note{color:#66666a}
+    .cart-checkout{background:#dceff7;color:#111}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:#6c9bb1}
+
+    /* Mobile collection: shorter images, slimmer cards, tighter spacing */
+    @media(max-width:650px){
+      .products{gap:10px;padding:0 0 7px;scroll-padding-left:0}
+      .product{flex:0 0 74%;scroll-snap-align:start;min-width:0}
+      .product-photo>img{width:100%;height:clamp(190px,62vw,270px);aspect-ratio:auto;object-fit:cover}
+      .product-tags{left:8px;top:8px;gap:4px}
+      .tag{padding:6px 7px;font-size:7px}
+      .switcher{gap:6px;padding:6px 8px 0}
+      .switcher button{padding:8px 4px;font-size:8px}
+      .section-note{margin:8px 0 0;line-height:1.5}
+      .product-info{padding:10px}
+      .product-heading{gap:6px}
+      .product h3,.price{font-size:12px;line-height:1.4}
+      .product-info p{margin:5px 0 9px;line-height:1.45;font-size:10px}
+      .product-order{min-height:39px;padding:9px 6px;font-size:8px}
+      .product-tools{margin:20px 0 12px}
+      .collection section,.collection{scroll-margin-top:78px}
+    }
+    @media(max-width:380px){.product{flex-basis:76%}.product-photo>img{height:clamp(190px,62vw,235px)}}
 
   </style>
 </head>
