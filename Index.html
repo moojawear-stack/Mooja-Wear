@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Mooja Wear — luxury streetwear rooted in Venda. Shop the collection, enquire about Lay-Buy and order via WhatsApp.">
+  <title>Mooja Wear | Luxury Streetwear from Venda</title>
+  <style>
+    :root{--site-primary:#1c2d23;--site-secondary:#b98b54;--site-background:#f1eee7;--site-on-primary:#fffaf2;--site-on-secondary:#171713;--site-on-background:#171713;--site-font-body:Arial,Helvetica,sans-serif;--site-font-heading:Arial,Helvetica,sans-serif;--site-heading-scale:1;--site-spacing-scale:1;--site-radius-scale:1;--site-decoration-opacity:1;--ink:#171713;--paper:#f1eee7;--white:#fffdf8;--forest:#1c2d23;--gold:#b98b54;--brown:#4a3025;--muted:#77746d;--line:#d8d2c7;--red:#a73b2e}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--site-font-body);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,select{cursor:pointer}img{display:block;max-width:100%}.container{width:min(1380px,92%);margin:auto}.announcement{overflow:hidden;background:var(--gold);color:#171713;padding:10px 0;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}.announcement-track{display:flex;gap:34px;width:max-content;animation:marquee 32s linear infinite}.announcement:hover .announcement-track{animation-play-state:paused}@keyframes marquee{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(241,238,231,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand img{width:128px;max-height:58px;object-fit:contain}.nav{display:flex;align-items:center;gap:25px;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.nav a:hover{color:#8b6036}.header-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:13px 18px;border:1px solid var(--forest);background:var(--forest);color:#fffdf8;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;transition:transform .2s,background .2s}.button:hover,.header-cta:hover{transform:translateY(-2px);background:#304637}.button.gold{background:var(--gold);border-color:var(--gold);color:#171713}.button.outline{background:transparent;color:var(--ink)}.menu-toggle{display:none;border:1px solid var(--line);background:transparent;padding:10px 12px;font-size:10px;font-weight:800;text-transform:uppercase}
+    .hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;align-items:center;padding:42px 0 72px;min-height:620px}.hero-copy{padding:20px 0}.eyebrow{font-size:9px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase;color:#805832}.hero h1{max-width:650px;margin:24px 0;font-size:clamp(56px,8vw,112px);line-height:.88;letter-spacing:-.085em;text-transform:uppercase}.hero h1 em{display:block;color:#805832;font-family:Georgia,serif;font-weight:400;letter-spacing:-.07em;text-transform:none}.hero-copy p{max-width:430px;color:#68675f;font-size:14px;line-height:1.9}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:36px;color:#68675f;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.hero-meta span:before{content:'✦';margin-right:8px;color:var(--gold)}.campaign-frame{position:relative;min-height:540px;background:#c8bca9;isolation:isolate}.campaign-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.campaign-frame:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.45));pointer-events:none}.campaign-label{position:absolute;z-index:1;left:24px;bottom:24px;color:white}.campaign-label small{font-size:9px;letter-spacing:2px;text-transform:uppercase}.campaign-label strong{display:block;margin-top:8px;font-size:clamp(24px,3vw,42px);letter-spacing:-1.8px;text-transform:uppercase}.campaign-stamp{position:absolute;z-index:2;right:-18px;top:22px;display:grid;place-items:center;width:104px;height:104px;border-radius:50%;background:var(--gold);color:#171713;text-align:center;font-size:9px;font-weight:900;line-height:1.5;letter-spacing:1px;text-transform:uppercase}
+    .ticker{background:var(--forest);color:var(--white);padding:17px 0;overflow:hidden}.ticker-inner{display:flex;justify-content:space-around;gap:25px;flex-wrap:wrap;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.ticker b{color:var(--gold)}section{padding:76px 0}.section-top{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:30px}.section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2{margin:12px 0 0;font-size:clamp(38px,5.5vw,70px);line-height:.95;letter-spacing:-.07em;text-transform:uppercase}.section-top p{max-width:410px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw;align-items:center}.story-copy p{max-width:450px;color:var(--muted);font-size:13px;line-height:1.9}.story-visuals{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.story-card{position:relative;min-height:300px;background:#c8bca9;overflow:hidden}.story-card img{width:100%;height:100%;min-height:300px;object-fit:cover;transition:transform .4s}.story-card:hover img{transform:scale(1.04)}.story-card span{position:absolute;left:10px;bottom:10px;padding:8px;background:rgba(20,20,17,.8);color:white;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .collection{background:var(--white);border-block:1px solid var(--line)}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{padding:11px 14px;border:1px solid var(--line);background:transparent;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.filter[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:white}.product-tools{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:28px 0 16px}.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product{background:#f5f2eb;border:1px solid #e4ded3;min-width:0}.product-photo{position:relative;background:#e7e0d5;overflow:hidden}.product-photo>img{width:100%;aspect-ratio:4/4.8;object-fit:cover}.product-tags{position:absolute;left:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap}.tag{background:var(--forest);color:white;padding:7px 9px;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.tag.sale{background:var(--red)}.switcher{display:flex;gap:7px;padding:10px 10px 0}.switcher button{flex:1;padding:10px 5px;background:var(--white);border:1px solid var(--line);font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.switcher button[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:white}.product-info{padding:15px}.product-heading{display:flex;justify-content:space-between;align-items:start;gap:10px}.product h3{margin:0;font-size:13px;line-height:1.5}.price{white-space:nowrap;font-size:13px;font-weight:800}.old-price{margin-right:5px;color:#888;font-size:10px;font-weight:400;text-decoration:line-through}.product-info p{min-height:34px;margin:8px 0 14px;color:var(--muted);font-size:11px;line-height:1.7}.product-order{width:100%;min-height:43px;background:transparent;border:1px solid var(--forest);font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.product-order:hover{background:var(--forest);color:white}.section-note{margin:14px 0 0;color:var(--muted);font-size:10px;line-height:1.7}
+    .statement{padding:72px 5%;background:var(--forest);color:var(--white);text-align:center}.statement .eyebrow{color:var(--gold)}.statement h2{margin:18px 0;font-size:clamp(38px,6vw,78px);line-height:.94;letter-spacing:-.07em;text-transform:uppercase}.statement p{max-width:560px;margin:0 auto;color:#d5d6cf;font-size:13px;line-height:1.8}
+    .laybuy{background:#e7dfd2}.split{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start}.laybuy-copy p,.order-copy p{max-width:500px;color:#66645c;font-size:13px;line-height:1.9}.bullets{padding-left:18px;color:#66645c;font-size:12px;line-height:2}.form-card{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:22px;background:var(--white);border:1px solid var(--line)}.field{display:flex;flex-direction:column;gap:7px}.field.full,.total,.form-submit,.fine-print{grid-column:1/-1}.field label{font-size:8px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;min-height:44px;padding:12px;border:1px solid #d8d1c5;border-radius:0;background:#f8f5ef;color:var(--ink)}.field textarea{min-height:80px;resize:vertical}.total{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-size:9px;font-weight:800;letter-spacing:1px}.total strong{font-size:23px;letter-spacing:-1px}.form-submit{width:100%;min-height:48px;border:0;background:#176b43;color:white;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.fine-print{margin:0;color:var(--muted);font-size:10px;line-height:1.7}.payfast-note{display:flex;gap:12px;align-items:flex-start;padding:16px;border:1px solid #d4c9b7;background:#f3eadb;margin-top:14px;font-size:11px;line-height:1.7}.payfast-note strong{display:block;margin-bottom:3px;text-transform:uppercase;font-size:9px;letter-spacing:1px}
+    footer{background:#151713;color:white;padding:54px 0 22px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:32px}.footer-brand img{width:130px;max-height:60px;object-fit:contain;margin-bottom:20px}.footer-grid h2{font-size:36px;line-height:.95;letter-spacing:-2px;text-transform:uppercase}.footer-grid p,.footer-grid a{color:#d0cec6;font-size:11px;line-height:1.9}.footer-label{margin-bottom:12px;color:var(--gold);font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.socials{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}.socials a{padding:10px 12px;border:1px solid #ffffff40;border-radius:99px;font-size:10px}.socials a:hover{border-color:var(--gold);color:white}.copyright{margin-top:28px;padding-top:18px;border-top:1px solid #ffffff2b;color:#9d9d94;font-size:9px;letter-spacing:.5px}.floating-whatsapp{position:fixed;z-index:30;right:18px;bottom:18px;padding:14px 17px;border-radius:99px;background:#176b43;color:white;box-shadow:0 8px 24px #0002;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.mobile-shop{display:none}
+    .cart-button{position:relative;display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:10px 13px;border:1px solid #c7a56a;background:transparent;color:#f5f2eb;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;white-space:nowrap}.cart-count{display:inline-grid;place-items:center;min-width:21px;height:21px;padding:0 5px;border-radius:50%;background:#c7a56a;color:#111;font-size:10px;font-weight:800}.cart-overlay{position:fixed;inset:0;background:#0009;z-index:60;opacity:0;visibility:hidden;transition:.2s}.cart-overlay.open{opacity:1;visibility:visible}.cart-drawer{position:fixed;z-index:61;right:0;top:0;height:100dvh;width:min(430px,100%);background:#151514;border-left:1px solid #514633;color:#f5f2eb;transform:translateX(102%);transition:transform .25s ease;display:flex;flex-direction:column}.cart-drawer.open{transform:translateX(0)}.cart-head{display:flex;align-items:center;justify-content:space-between;padding:22px;border-bottom:1px solid #393630}.cart-head h2{margin:0;font-size:22px;font-weight:600}.cart-close{border:1px solid #514b40;background:transparent;color:#f5f2eb;padding:8px 12px}.cart-items{padding:18px;overflow:auto;flex:1}.cart-empty{color:#b0aaa0;line-height:1.8;font-size:13px;padding:22px 0}.cart-item{padding:14px 0;border-bottom:1px solid #393630}.cart-item-top{display:flex;justify-content:space-between;gap:12px}.cart-item-name{font-size:13px;font-weight:700}.cart-item-meta{font-size:11px;color:#b0aaa0;line-height:1.8;margin-top:5px}.cart-item-controls{display:flex;align-items:center;gap:8px;margin-top:10px}.cart-item-controls button{border:1px solid #514b40;background:transparent;color:#f5f2eb;padding:5px 9px}.cart-item-controls .remove{margin-left:auto;color:#d6b979}.cart-foot{padding:18px 22px;border-top:1px solid #393630}.cart-subtotal{display:flex;justify-content:space-between;margin-bottom:15px;font-size:13px}.cart-checkout{width:100%;padding:14px;border:0;background:#c7a56a;color:#111;font-weight:800;text-transform:uppercase;letter-spacing:1px}.cart-note{font-size:10px;line-height:1.6;color:#b0aaa0;margin:10px 0 0}@media(max-width:650px){.cart-button{padding:8px 9px;font-size:9px}.header-inner{gap:8px}.cart-drawer{width:100%}}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    @media(max-width:900px){.nav{gap:13px}.hero{min-height:0;gap:28px}.campaign-frame{min-height:440px}.story{grid-template-columns:1fr}.story-copy{max-width:650px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.split{gap:25px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+    @media(max-width:650px){.header-inner{min-height:68px;gap:10px}.brand img{width:105px;max-height:50px}.menu-toggle{display:inline-flex}.nav{display:none;order:5;flex:1 0 100%;align-items:stretch;flex-direction:column;gap:0;padding:8px 0 12px}.nav.open{display:flex}.nav a{padding:13px 4px;border-bottom:1px solid var(--line)}.header-inner{flex-wrap:wrap}.header-cta{display:none}.hero{grid-template-columns:1fr;padding:30px 0 42px;gap:28px}.hero h1{font-size:clamp(54px,15vw,86px)}.campaign-frame{min-height:440px}.campaign-stamp{width:82px;height:82px;right:-7px;font-size:8px}.ticker-inner{justify-content:flex-start;gap:18px;flex-wrap:nowrap;white-space:nowrap;font-size:8px}.ticker-inner span:nth-child(n+4){display:none}section{padding:54px 0}.section-top{align-items:flex-start;flex-direction:column;gap:12px}.section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2{font-size:clamp(38px,11vw,58px)}.story-visuals{gap:7px}.story-card,.story-card img{min-height:220px}.story-card span{left:5px;bottom:5px;padding:6px;font-size:7px}.products{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;-webkit-overflow-scrolling:touch}.product{flex:0 0 82%;scroll-snap-align:start}.product-photo>img{aspect-ratio:4/4.8}.split{grid-template-columns:1fr;gap:24px}.form-card{padding:16px;gap:12px}.footer-grid{grid-template-columns:1fr;gap:20px}.footer-grid>div:first-child{grid-column:auto}.floating-whatsapp{bottom:14px;right:12px}.mobile-shop{display:inline-flex}.hero-meta{gap:12px}.hero-meta span{font-size:8px}}
+    @media(max-width:380px){.story-visuals{grid-template-columns:1fr}.story-card,.story-card img{min-height:300px}.product{flex-basis:90%}.form-card{grid-template-columns:1fr}.field.full,.total,.form-submit,.fine-print{grid-column:auto}}
+
+    /* Mooja Wear dark-luxury refresh */
+    :root{--site-primary:#0c0c0b;--site-secondary:#c7a56a;--site-background:#111110;--site-on-primary:#f8f5ee;--site-on-secondary:#111110;--site-on-background:#f5f2eb;--ink:#f5f2eb;--paper:#111110;--white:#191917;--forest:#0b0b0a;--gold:#c7a56a;--brown:#4a3025;--muted:#b0aaa0;--line:#393630;--red:#9c4438}
+    body{background:var(--paper);color:var(--ink)}
+    .announcement{background:#c7a56a;color:#111110}
+    .site-header{background:rgba(15,15,14,.96);border-bottom:1px solid #393630;color:#f5f2eb}
+    .nav a:hover,.eyebrow{color:var(--gold)}
+    .header-cta,.button{background:var(--gold);border-color:var(--gold);color:#111110}
+    .button:hover,.header-cta:hover{background:#ddc18d;color:#111110}
+    .button.outline{background:transparent;border-color:#c7a56a;color:#f5f2eb}
+    .menu-toggle{border-color:#514b40;color:#f5f2eb}
+    .hero{padding-top:54px;padding-bottom:62px}
+    .hero h1{color:#f7f4ed}
+    .hero h1 em{color:var(--gold)}
+    .hero-copy p,.hero-meta{color:#c0bbb1}
+    .campaign-frame{background:#292722;border:1px solid #393630}
+    .campaign-frame:after{background:linear-gradient(180deg,rgba(0,0,0,.02) 35%,rgba(0,0,0,.75))}
+    .campaign-stamp{background:var(--gold);color:#111110}
+    .ticker{background:#c7a56a;color:#111110}
+    .ticker b{color:#fff8e9}
+    .collection{background:#151514;border-color:#393630}
+    .section-top p,.story-copy p,.laybuy-copy p,.order-copy p,.bullets{color:#b0aaa0}
+    .filters .filter{border-color:#514b40;color:#e9e4da}
+    .filter[aria-pressed=true],.switcher button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#111110}
+    .product{background:#1b1b19;border-color:#393630}
+    .product-photo{background:#262520}
+    .product-photo>img{background:#262520}
+    .tag{background:var(--gold);color:#111110}
+    .tag.sale{background:#9c4438;color:white}
+    .switcher button{background:#22221f;border-color:#4a463e;color:#eee8dc}
+    .product h3,.price{color:#f7f3ea}
+    .product-info p,.section-note{color:#b0aaa0}
+    .product-order{border-color:var(--gold);color:#f5f2eb}
+    .product-order:hover{background:var(--gold);color:#111110}
+    .statement{background:#080808;border-block:1px solid #393630}
+    .statement .eyebrow{color:var(--gold)}
+    .statement p{color:#c3bdb3}
+    .laybuy{background:#191917;border-block:1px solid #393630}
+    .form-card{background:#20201d;border-color:#454036}
+    .field label{color:#e6dfd2}
+    .field input,.field select,.field textarea{background:#121211;border-color:#514b40;color:#f5f2eb}
+    .field input::placeholder,.field textarea::placeholder{color:#938c80}
+    .total{border-color:#514b40;color:#e8e0d2}
+    .total strong{color:var(--gold)}
+    .form-submit{background:var(--gold);color:#111110}
+    .form-submit:hover{background:#ddc18d}
+    .fine-print{color:#aaa397}
+    .payfast-note{background:#28251e;border-color:#6b5737;color:#e8dfcf}
+    footer{background:#080808;border-top:1px solid #393630}
+    .footer-brand .eyebrow,.footer-label{color:var(--gold)}
+    .socials a{border-color:#514b40;color:#f5f2eb}
+    .socials a:hover{border-color:var(--gold);background:var(--gold);color:#111110}
+    .copyright{border-color:#393630;color:#a9a296}
+    .floating-whatsapp{background:var(--gold);color:#111110;border:1px solid #e0c58f}
+    .story-card{background:#292722}
+    .story-card span{background:rgba(8,8,8,.88);border-left:2px solid var(--gold)}
+    .section-note{color:#aaa397}
+    @media(max-width:650px){.nav{background:#111110}.nav a{border-color:#393630}.campaign-frame{min-height:390px}.campaign-stamp{right:8px;top:12px}}
+
+  
+    /* Editorial refinements: quieter type, real product photography first, less decorative UI */
+    .announcement{background:#171715;color:#d2b47a;padding:8px 0;font-size:9px;letter-spacing:1.4px}
+    .announcement-track{animation:none;width:auto;justify-content:center;gap:12px}
+    .announcement-track span:nth-child(n+5){display:none}
+    .site-header{background:rgba(17,17,16,.98);backdrop-filter:none}
+    .nav{letter-spacing:1px;font-size:10px;font-weight:600}
+    .hero{min-height:0;padding-top:46px;padding-bottom:52px;gap:4vw}
+    .hero h1{font-size:clamp(48px,6.5vw,84px);line-height:.98;letter-spacing:-.055em;text-transform:none}
+    .hero h1 em{font-family:Georgia,'Times New Roman',serif;font-style:italic;letter-spacing:-.045em}
+    .eyebrow{letter-spacing:1.5px;font-size:9px;font-weight:700}
+    .hero-copy p{font-size:14px;line-height:1.75;max-width:400px}
+    .hero-meta span:before{content:'';margin:0}
+    .hero-meta{letter-spacing:.8px;font-weight:600}
+    .campaign-frame{min-height:500px;border:0;background:#22211e}
+    .campaign-frame:after{background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.52))}
+    .campaign-stamp{display:none}
+    .campaign-label strong{font-size:clamp(22px,2.5vw,34px);letter-spacing:-.8px;text-transform:none}
+    .ticker{background:#191917;padding:13px 0}
+    .ticker-inner{font-weight:600;letter-spacing:1.1px}
+    section{padding-top:64px;padding-bottom:64px}
+    .section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2,.statement h2{letter-spacing:-.045em;text-transform:none;line-height:1.02}
+    .products{gap:12px}
+    .product{background:#171715;border-color:#302f2b}
+    .product-photo{background:#22211e}
+    .product-info{padding:14px}
+    .product h3,.price{font-size:13px;font-weight:600}
+    .product-info p{min-height:0}
+    .tag,.filter,.switcher button,.product-order,.button,.header-cta{letter-spacing:.8px;font-weight:700}
+    .tag{background:#292824}
+    .filter[aria-pressed=true],.switcher button[aria-pressed=true]{background:#c7a56a;border-color:#c7a56a;color:#111110}
+    .product-order{border-color:#6e5b3b}
+    .product-order:hover{background:#c7a56a;color:#111110}
+    .story-card span{font-size:9px;letter-spacing:.5px;text-transform:none}
+    .statement{background:#191917}
+    .statement h2{text-transform:none}
+    .form-card{background:#191917;border-color:#393630}
+    .field input,.field select,.field textarea{background:#111110;border-color:#403d35;color:#f5f2eb}
+    .laybuy{background:#1c1b18}
+    .laybuy-copy p,.order-copy p,.bullets{color:#c0bbb1}
+    .payfast-note{background:#211f1a;border-color:#4b4231}
+    .form-submit{background:#c7a56a;color:#111110}
+    footer{background:#0d0d0c}
+    .socials a{border-radius:3px}
+    .floating-whatsapp{border-radius:3px;box-shadow:none}
+    @media(max-width:650px){.announcement-track{justify-content:flex-start;padding-left:16px}.hero{padding-top:28px;padding-bottom:34px}.hero h1{font-size:clamp(46px,13vw,70px)}.campaign-frame{min-height:390px}.campaign-label{left:16px;bottom:16px}.section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2,.statement h2{text-transform:none}.product{background:#171715}.ticker-inner{font-size:8px}}
+
+
+    .shoutout{padding:76px 0;background:#111110;border-block:1px solid #393630}
+    .shoutout-inner{max-width:900px;margin:0 auto;text-align:center;padding:0 24px}
+    .shoutout .eyebrow{color:var(--gold);letter-spacing:2px}
+    .shoutout h2{font-size:clamp(34px,6vw,64px);line-height:1.02;letter-spacing:-1.8px;margin:18px 0;text-transform:uppercase}
+    .shoutout h2 em{font-style:normal;color:var(--gold)}
+    .shoutout p{max-width:650px;margin:0 auto 20px;color:#c0bbb1;line-height:1.8}
+    .shoutout-manifesto{font-size:11px;letter-spacing:1.5px;color:#e8d3a7;margin:26px auto!important}
+    .shoutout-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+    .shoutout-actions .button{min-width:190px}
+    @media(max-width:650px){.shoutout{padding:54px 0}.shoutout-inner{padding:0 20px}.shoutout h2{letter-spacing:-.8px}.shoutout-manifesto{line-height:1.8}}
+
+  
+
+    /* Mooja Wear soft icy blue / beige / pink palette refresh */
+    :root{--site-primary:#111111;--site-secondary:#dceff7;--site-background:#ffffff;--site-on-primary:#ffffff;--site-on-secondary:#111111;--site-on-background:#111111;--ink:#171717;--paper:#ffffff;--white:#ffffff;--forest:#111111;--gold:#dceff7;--brown:#e8d9c4;--muted:#66666a;--line:#e6e1dc;--red:#f1c5d2}
+    body{background:#fff;color:#171717}
+    .announcement{background:#dceff7;color:#111}
+    .site-header{background:rgba(255,255,255,.97);border-bottom:1px solid #e6e1dc;color:#171717}
+    .nav a:hover,.eyebrow{color:#4d7589}
+    .header-cta,.button{background:#111;border-color:#111;color:#fff}
+    .button:hover,.header-cta:hover{background:#343434;color:#fff}
+    .button.outline{background:transparent;border-color:#111;color:#111}
+    .menu-toggle{border-color:#d6d2cd;color:#111}
+    .hero h1{color:#111}
+    .hero h1 em{color:#6c9bb1}
+    .hero-copy p,.hero-meta{color:#5d5d60}
+    .campaign-frame{background:#e8d9c4;border:1px solid #e6e1dc}
+    .campaign-stamp{background:#f4c6d4;color:#111}
+    .ticker{background:#111;color:#fff}
+    .ticker b{color:#dceff7}
+    .collection{background:#fff;border-color:#e6e1dc}
+    .section-top p,.story-copy p,.laybuy-copy p,.order-copy p,.bullets{color:#66666a}
+    .filters .filter{border-color:#d9d5d0;color:#222;background:#fff}
+    .filter[aria-pressed=true],.switcher button[aria-pressed=true]{background:#dceff7;border-color:#dceff7;color:#111}
+    .product{background:#fff;border-color:#e7e2dd}
+    .product-photo{background:#f1eee9}
+    .product-photo>img{background:#f1eee9}
+    .tag{background:#111;color:#fff}
+    .tag.sale{background:#f4c6d4;color:#111}
+    .switcher button{background:#fff;border-color:#e0dcd7;color:#222}
+    .product h3,.price{color:#171717}
+    .product-info p,.section-note{color:#66666a}
+    .product-order{border-color:#111;color:#111;background:#fff}
+    .product-order:hover{background:#111;color:#fff}
+    .statement{background:#111;color:#fff;border-block:1px solid #111}
+    .statement .eyebrow{color:#dceff7}
+    .statement p{color:#e3e3e3}
+    .laybuy{background:#f4eee5;border-block:1px solid #e8dfd4}
+    .form-card{background:#fff;border-color:#e6e1dc}
+    .field label{color:#222}
+    .field input,.field select,.field textarea{background:#fff;border-color:#d9d5d0;color:#171717}
+    .field input::placeholder,.field textarea::placeholder{color:#888}
+    .total{border-color:#e6e1dc;color:#222}
+    .total strong{color:#5d91a8}
+    .form-submit{background:#f4c6d4;color:#111}
+    .form-submit:hover{background:#eaaec1}
+    .fine-print{color:#66666a}
+    .payfast-note{background:#f7f0e8;border-color:#e8d9c4;color:#333}
+    footer{background:#111;border-top:1px solid #111}
+    .footer-brand .eyebrow,.footer-label{color:#dceff7}
+    .socials a{border-color:#777;color:#fff}
+    .socials a:hover{border-color:#f4c6d4;background:#f4c6d4;color:#111}
+    .copyright{border-color:#444;color:#c8c8c8}
+    .floating-whatsapp{background:#dceff7;color:#111;border:1px solid #bad9e7}
+    .story-card{background:#e8d9c4}
+    .story-card span{background:rgba(17,17,17,.88);border-left:2px solid #f4c6d4}
+    .shoutout{background:#f8f5f1;border-color:#e6e1dc;color:#171717}
+    .shoutout .eyebrow{color:#4d7589}
+    .shoutout h2 em{color:#6c9bb1}
+    .shoutout p{color:#55555a}
+    .shoutout-manifesto{color:#5b7180}
+    .cart-button{border-color:#b7d9e7;background:#fff;color:#111}
+    .cart-count{background:#dceff7;color:#111}
+    .cart-drawer{background:#fff;color:#171717;border-left:1px solid #e6e1dc}
+    .cart-head,.cart-foot,.cart-item{border-color:#e6e1dc}
+    .cart-close,.cart-item-controls button{border-color:#d9d5d0;background:#fff;color:#171717}
+    .cart-empty,.cart-item-meta,.cart-note{color:#66666a}
+    .cart-checkout{background:#dceff7;color:#111}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:#6c9bb1}
+
+    /* Mobile collection: shorter images, slimmer cards, tighter spacing */
+    @media(max-width:650px){
+      .products{gap:10px;padding:0 0 7px;scroll-padding-left:0}
+      .product{flex:0 0 74%;scroll-snap-align:start;min-width:0}
+      .product-photo>img{width:100%;height:clamp(190px,62vw,270px);aspect-ratio:auto;object-fit:cover}
+      .product-tags{left:8px;top:8px;gap:4px}
+      .tag{padding:6px 7px;font-size:7px}
+      .switcher{gap:6px;padding:6px 8px 0}
+      .switcher button{padding:8px 4px;font-size:8px}
+      .section-note{margin:8px 0 0;line-height:1.5}
+      .product-info{padding:10px}
+      .product-heading{gap:6px}
+      .product h3,.price{font-size:12px;line-height:1.4}
+      .product-info p{margin:5px 0 9px;line-height:1.45;font-size:10px}
+      .product-order{min-height:39px;padding:9px 6px;font-size:8px}
+      .product-tools{margin:20px 0 12px}
+      .collection section,.collection{scroll-margin-top:78px}
+    }
+    @media(max-width:380px){.product{flex-basis:76%}.product-photo>img{height:clamp(190px,62vw,235px)}}
+
+  
+    /* MOOJA WEAR — premium sport-editorial direction inspired by leading global streetwear stores */
+    :root{--site-primary:#111;--site-secondary:#bca16b;--site-background:#fff;--site-on-primary:#fff;--site-on-secondary:#111;--site-on-background:#111;--ink:#111;--paper:#fff;--white:#fff;--forest:#111;--gold:#bca16b;--muted:#666;--line:#e6e6e6}
+    body{background:#fff;color:#111;font-family:Arial,Helvetica,sans-serif}
+    .announcement{background:#f5f5f5;color:#111;padding:8px 0;font-size:9px;letter-spacing:1.3px}
+    .site-header{background:rgba(255,255,255,.97);color:#111;border-bottom:1px solid #eee;backdrop-filter:blur(12px)}
+    .nav{font-size:10px;letter-spacing:.7px;gap:23px}
+    .nav a:hover,.eyebrow{color:#555}
+    .header-cta,.button{background:#111;border-color:#111;color:#fff;border-radius:30px;letter-spacing:.7px;font-size:10px}
+    .button:hover,.header-cta:hover{background:#333;color:#fff}
+    .button.outline{background:transparent;color:#111;border-color:#111}
+    .hero{padding-top:28px;padding-bottom:44px;min-height:0;gap:4vw}
+    .hero h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(54px,8vw,108px);font-weight:900;letter-spacing:-.075em;line-height:.88;text-transform:uppercase;color:#111}
+    .hero h1 em{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:900;letter-spacing:-.075em;text-transform:uppercase;color:#777}
+    .hero-copy p{font-size:14px;line-height:1.7;color:#555}
+    .hero-meta{color:#555;font-size:9px;letter-spacing:.8px}
+    .hero-meta span:before{color:#111}
+    .campaign-frame{min-height:clamp(390px,47vw,620px);border:0;background:#eee;overflow:hidden}
+    .campaign-frame:after{background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.48))}
+    .campaign-stamp{background:#fff;color:#111;border-radius:0;width:90px;height:90px;right:0;top:0}
+    .ticker{background:#111;color:#fff}
+    .ticker b{color:#c9b58b}
+    section{padding-top:64px;padding-bottom:64px}
+    .section-top{margin-bottom:24px}
+    .section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2{font-weight:900;letter-spacing:-.06em;text-transform:uppercase}
+    .collection{background:#fff;border-block:1px solid #eee}
+    .product{background:#fff;border:0;border-bottom:1px solid #e8e8e8;border-radius:0;box-shadow:none}
+    .product-photo{background:#f5f5f5;border-radius:0}
+    .product-photo>img{background:#f5f5f5}
+    .product-info{padding:14px 2px 16px}
+    .product h3,.price{color:#111;font-size:13px;font-weight:800}
+    .product-info p,.section-note{color:#666}
+    .tag{border-radius:0;background:#111;color:#fff}
+    .tag.sale{background:#d8d0c2;color:#111}
+    .switcher{padding:8px 0 0}
+    .switcher button{border-radius:0;background:#fff;color:#111;border:1px solid #ddd}
+    .switcher button[aria-pressed=true],.filter[aria-pressed=true]{background:#111;color:#fff;border-color:#111}
+    .filters .filter{border-radius:30px;border-color:#ddd;color:#111}
+    .product-order{border:1px solid #111;border-radius:30px;background:#fff;color:#111;letter-spacing:.7px}
+    .product-order:hover{background:#111;color:#fff}
+    .story-card{border-radius:0;background:#eee}
+    .story-card span{border:0;background:rgba(0,0,0,.72)}
+    .statement{background:#f5f5f5;color:#111;border-block:1px solid #eee}
+    .statement .eyebrow{color:#555}.statement p{color:#555}
+    .laybuy{background:#fff;border-block:1px solid #eee}
+    .form-card{background:#fafafa;border:1px solid #e5e5e5;border-radius:0;box-shadow:none}
+    .field input,.field select,.field textarea{background:#fff;border-color:#ddd;color:#111;border-radius:0}
+    .form-submit,.cart-checkout{background:#111;color:#fff;border-radius:30px}
+    .total strong{color:#111}
+    .payfast-note{background:#f5f5f5;border-color:#ddd;color:#333}
+    .shoutout{background:#f6f6f6;border-color:#eee;color:#111}
+    .shoutout .eyebrow,.shoutout h2 em{color:#555}.shoutout p{color:#555}
+    footer{background:#111;border-top:0;color:#fff}
+    .footer-brand .eyebrow,.footer-label{color:#d2c2a2}
+    .socials a{border-color:#555;color:#fff;border-radius:30px}
+    .socials a:hover{background:#fff;color:#111;border-color:#fff}
+    .floating-whatsapp{background:#fff;color:#111;border:1px solid #ddd;box-shadow:0 4px 18px #0002}
+    .cart-button{border-color:#111;background:#fff;color:#111;border-radius:30px}
+    .cart-count{background:#111;color:#fff}
+    .cart-drawer{background:#fff;color:#111;border-color:#eee}
+    .cart-head,.cart-foot,.cart-item{border-color:#eee}
+    .cart-close,.cart-item-controls button{border-color:#ddd;background:#fff;color:#111}
+    .cart-empty,.cart-item-meta,.cart-note{color:#666}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #111;outline-offset:3px}
+    @media(max-width:650px){
+      .announcement{font-size:8px;letter-spacing:1px}
+      .site-header{background:rgba(255,255,255,.98)}.nav{background:#fff}.nav a{border-color:#eee}
+      .hero{padding-top:24px;padding-bottom:30px;gap:22px}
+      .hero h1{font-size:clamp(48px,13.5vw,76px);line-height:.9;letter-spacing:-.075em}
+      .hero-copy p{font-size:13px}
+      .campaign-frame{min-height:clamp(340px,105vw,480px)}
+      .campaign-stamp{width:68px;height:68px;font-size:7px}
+      section{padding:44px 0}
+      .section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2{font-size:clamp(36px,10vw,54px)}
+      .product{background:#fff;border-bottom:1px solid #e5e5e5}
+      .product-photo>img{height:clamp(190px,62vw,270px);object-fit:cover}
+      .product-info{padding:10px 0 13px}
+      .product-order{min-height:40px}
+      .cart-drawer{background:#fff;color:#111}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+    /* MOOJA WEAR — refined sport-luxury storefront */
+    :root{--mw-black:#111;--mw-paper:#fff;--mw-grey:#f4f4f2;--mw-line:#e4e4e1;--mw-gold:#c5a875}
+    html{scroll-padding-top:100px}
+    .announcement{background:#111;color:#fff;padding:9px 0;letter-spacing:1.2px}
+    .announcement-track{justify-content:center}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid #e9e9e6;color:#111}
+    .header-inner{min-height:72px}
+    .brand img{width:136px;max-height:56px}
+    .nav{font-size:10px;letter-spacing:.65px;font-weight:700;gap:clamp(12px,2vw,26px)}
+    .nav a{transition:opacity .2s}
+    .nav a:hover{color:#555}
+    .header-cta,.button{border-radius:999px;font-size:10px;letter-spacing:.5px;min-height:44px;padding:13px 21px}
+    .button.outline{border-width:1px}
+    .hero{width:100%;padding:30px 4% 48px;gap:4vw;min-height:0}
+    .hero-copy{padding:25px 0}
+    .hero h1{font-size:clamp(54px,7.4vw,104px);line-height:.9;letter-spacing:-.075em}
+    .hero h1 em{color:#777}
+    .hero-copy p{color:#555;max-width:410px;font-size:14px;line-height:1.8}
+    .eyebrow{color:#656565;letter-spacing:1.4px}
+    .hero-meta{color:#555}
+    .campaign-frame{min-height:clamp(400px,48vw,650px);background:#eee;border:0}
+    .campaign-label{left:25px;bottom:25px}
+    .campaign-label strong{font-size:clamp(27px,3.5vw,48px);letter-spacing:-1.5px}
+    .campaign-stamp{background:#fff;border-radius:50%;width:88px;height:88px;right:18px;top:18px;box-shadow:0 4px 20px #00000012}
+    .ticker{background:#f2f2f0;color:#111;padding:15px 0}
+    .ticker b{color:#777}
+    section{padding-top:76px;padding-bottom:76px}
+    .section-top{margin-bottom:28px}
+    .section-top h2,.story-copy h2,.laybuy-copy h2,.order-copy h2,.statement h2{font-weight:900;letter-spacing:-.065em}
+    .collection{background:#fff;border-block:1px solid #eee}
+    .product-tools{margin:25px 0 18px}
+    .filters .filter{border-radius:999px;padding:10px 16px}
+    .filter[aria-pressed=true],.switcher button[aria-pressed=true]{background:#111;color:#fff;border-color:#111}
+    .products{gap:22px}
+    .product{background:#fff;border:0;min-width:0}
+    .product-photo{background:#f2f2f0}
+    .product-photo>img{aspect-ratio:4/4.7;object-fit:cover;transition:transform .35s ease}
+    .product-image-placeholder{width:100%;min-height:100%;aspect-ratio:5/6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;background:linear-gradient(145deg,#eee9e0,#c9c0b3);color:#292820;font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase}
+    .product-image-placeholder span{font-size:30px;letter-spacing:0;font-weight:400}
+    .product:hover .product-photo>img{transform:scale(1.025)}
+    .product-info{padding:14px 0 17px}
+    .product-heading{align-items:flex-start}
+    .product h3,.price{font-size:14px;font-weight:700;letter-spacing:-.2px}
+    .product-info p{color:#6a6a66;font-size:12px}
+    .tag{background:#111;padding:8px 10px}
+    .tag.sale{background:#e7d8bf;color:#111}
+    .switcher{padding:9px 0 0}
+    .switcher button{border-radius:999px;padding:9px 6px}
+    .product-order{border-radius:999px;border:1px solid #111;background:#111;color:#fff;min-height:44px}
+    .product-order:hover{background:#333;color:#fff}
+    .statement{background:#f2f2f0;color:#111;border-block:1px solid #e7e7e4}
+    .statement .eyebrow{color:#555}
+    .statement p{color:#555}
+    .story-card{background:#eee}
+    .story-card img{filter:saturate(.9)}
+    .laybuy{background:#f7f5f1;border-block:1px solid #e9e5de}
+    .form-card{background:#fff;border-color:#e6e6e2}
+    .field input,.field select,.field textarea{border-radius:8px;background:#fafaf8;border-color:#deded9}
+    .form-submit,.cart-checkout{border-radius:999px;background:#111;color:#fff;min-height:48px}
+    .form-submit:hover,.cart-checkout:hover{background:#333;color:#fff}
+    .payfast-note{background:#f5f3ee;border-color:#e4dfd5}
+    .shoutout{background:#f6f6f4;border-color:#e8e8e5;color:#111}
+    .shoutout .eyebrow,.shoutout h2 em{color:#666}
+    .shoutout p{color:#555}
+    .cart-button{border-radius:999px;border-color:#111;background:#fff;color:#111}
+    .cart-count{background:#111;color:#fff}
+    .cart-drawer{background:#fff;color:#111;border-left:1px solid #e8e8e5}
+    .cart-head,.cart-foot,.cart-item{border-color:#e8e8e5}
+    .cart-close,.cart-item-controls button{border-color:#ddd;background:#fff;color:#111}
+    .cart-empty,.cart-item-meta,.cart-note{color:#666}
+    .floating-whatsapp{background:#111;color:#fff;border:1px solid #111;border-radius:999px;box-shadow:0 5px 22px #0002}
+    footer{background:#111;color:#fff}
+    .footer-grid p,.footer-grid a{color:#d1d1cd}
+    .footer-label,.footer-brand .eyebrow{color:#c5a875}
+    .socials a{border-radius:999px}
+    @media(max-width:900px){
+      .hero{width:min(1380px,92%);padding:30px 0 44px}
+      .campaign-frame{min-height:420px}
+      .products{gap:16px}
+    }
+    @media(max-width:650px){
+      .announcement{padding:8px 0}
+      .announcement-track{justify-content:flex-start}
+      .site-header{background:rgba(255,255,255,.98)}
+      .hero{width:92%;padding:23px 0 30px;gap:20px}
+      .hero h1{font-size:clamp(47px,13vw,74px);line-height:.91}
+      .hero-copy{padding:10px 0}
+      .campaign-frame{min-height:clamp(330px,100vw,470px)}
+      .campaign-label{left:16px;bottom:17px}
+      .campaign-label strong{font-size:29px}
+      .ticker-inner{justify-content:flex-start}
+      section{padding:48px 0}
+      .products{gap:13px}
+      .product{flex:0 0 78%}
+      .product-photo>img{height:clamp(210px,65vw,290px);aspect-ratio:auto}
+      .product-info{padding:12px 0 15px}
+      .product h3,.price{font-size:13px}
+      .product-order{min-height:42px}
+      .story-visuals{gap:7px}
+      .story-card,.story-card img{min-height:220px}
+      .form-card{border-radius:10px}
+      .field input,.field select,.field textarea{border-radius:7px}
+      .floating-whatsapp{bottom:13px;right:12px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="announcement" aria-label="Brand announcement"><div class="announcement-track"><span>Venda roots</span><span>✦</span><span>African soul</span><span>✦</span><span>Global street energy</span><span>✦</span><span>Established 2026</span><span>✦</span><span>Venda roots</span><span>✦</span><span>African soul</span><span>✦</span><span>Global street energy</span><span>✦</span><span>Established 2026</span><span>✦</span></div></div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Mooja Wear home"><img src="Mooja.logoo.png" alt="Mooja Wear logo"></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation"><a href="#story">Our point of view</a><a href="#collection">Shop</a><a href="#shoutout">The Movement</a><a href="#laybuy">Lay-Buy</a><a href="#contact">Contact</a></nav>
+    <a class="header-cta" href="#collection">Shop the edit ↗</a><button class="cart-button" id="cartOpen" type="button" aria-label="Open shopping cart">Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div></header>
+  <main id="home">
+    <section class="container hero">
+      <div class="hero-copy"><div class="eyebrow">Venda, Limpopo · South Africa · Est. 2026</div><h1>Rooted in<br>Venda.<em>Made to move.</em></h1><p>Mooja Wear is a streetwear brand from Venda, Limpopo. We make everyday pieces inspired by where we come from and how we choose to show up.</p><div class="hero-actions"><a class="button" href="#collection">Shop the collection <span>↗</span></a><a class="button outline" href="#story">Discover our story</a></div><div class="hero-meta"><span>Premium essentials</span><span>Unisex streetwear</span></div></div>
+      <div class="campaign-frame"><img src="Dark1.T-shirt.JPG" alt="Mooja Wear streetwear campaign" fetchpriority="high" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(145deg,#44352a,#8a735b 48%,#1c2d23)';"><div class="campaign-label"><small>Mooja Wear · Est. 2026</small><strong>Made for<br>everyday wear.</strong></div></div>
+    </section>
+    <div class="ticker"><div class="container ticker-inner"><span><b>01</b> Venda roots</span><span>✦</span><span><b>02</b> African soul</span><span>✦</span><span><b>03</b> Global street energy</span><span>✦</span></div></div>
+    <section class="container story" id="story"><div class="story-copy"><div class="eyebrow">Our point of view</div><h2>From Venda,<br>with purpose.</h2><p>Mooja Wear started with a simple idea: make streetwear that feels like us. Our roots are in Venda, and our clothes are made for everyday life, wherever it takes you.</p><a class="button outline" href="#collection">Find your piece ↗</a></div><div class="story-visuals"><article class="story-card"><img src="Model2.jpg" alt="Mooja Wear lookbook portrait" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(150deg,#b7a48c,#514239)'"><span>01 / Own your lane</span></article><article class="story-card"><img src="Model3.jpg" alt="Mooja Wear street style" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(150deg,#d7c5aa,#625446)'"><span>02 / Stay unmistakable</span></article><article class="story-card"><img src="Model6.jpg" alt="Mooja Wear community campaign" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(150deg,#7e8879,#332d27)'"><span>03 / Own the moment</span></article></div></section>
+    <section class="collection" id="collection"><div class="container"><div class="section-top"><div><div class="eyebrow">The first drop · Collection 001</div><h2 id="collectionTitle">The pieces<br>you live in.</h2></div><p id="collectionDescription">Browse the pieces, check the front and back, then choose your size and colour to place an order.</p></div><div class="product-tools"><div class="filters" role="group" aria-label="Filter collection"><button class="filter" data-filter="all" aria-pressed="true">Shop all</button><button class="filter" data-filter="new" aria-pressed="false">Just dropped</button><button class="filter" data-filter="promo" aria-pressed="false">Promos</button></div><div class="eyebrow">Swipe to discover ↔</div></div><div class="products" id="productGrid" aria-live="polite"></div><p class="section-note">Prices shown in South African rand (ZAR). Product availability, stock and delivery costs are confirmed before payment.</p></div></section>
+    <section class="statement"><div class="eyebrow">Venda roots · African soul · Global street energy</div><h2>Venda roots.<br>Your own way.</h2><p>Streetwear shaped by our home in Venda and made to be worn your way.</p></section>
+    <section class="laybuy" id="laybuy"><div class="container split"><div class="laybuy-copy"><div class="eyebrow">Make it yours</div><h2>Your fit.<br>Your pace.</h2><p>Found the piece you want? Ask us about Lay-Buy and discuss a payment arrangement that works for you before committing.</p><ul class="bullets"><li>Choose your product, size and colour.</li><li>Tell us your preferred deposit and instalment timing.</li><li>We'll discuss availability and confirm the terms directly.</li></ul><p>Lay-Buy arrangements are enquiries only until Mooja Wear confirms the terms with you.</p></div><form class="form-card" id="laybuyForm"><div class="field full"><label for="layProduct">Product</label><select id="layProduct" required></select></div><div class="field"><label for="laySize">Size</label><select id="laySize" required><option value="">Choose size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option></select></div><div class="field"><label for="layColour">Colour</label><select id="layColour" required><option value="">Choose colour</option><option>Black</option><option>White</option><option>Chocolate Brown</option><option>Beige</option><option>Soft Pink</option><option>Soft Sky Blue</option><option>Dark Grey</option><option>Pink</option></select></div><div class="field"><label for="layDeposit">Deposit in mind (R)</label><input id="layDeposit" type="number" min="0" step="10" placeholder="e.g. 150"></div><div class="field"><label for="layFrequency">Instalments</label><select id="layFrequency"><option>Weekly</option><option>Every two weeks</option><option>Monthly</option><option>Discuss with me</option></select></div><div class="field full"><label for="layNotes">Extra notes (optional)</label><textarea id="layNotes" placeholder="Preferred payment dates or questions"></textarea></div><button class="form-submit" type="submit">Enquire on WhatsApp ↗</button><p class="fine-print">This form prepares a WhatsApp enquiry; it does not automatically approve credit or create a payment agreement.</p></form></div></section>
+    <section id="order"><div class="container split"><div class="order-copy"><div class="eyebrow">Your order starts here</div><h2>Choose your<br>next favourite.</h2><p>Select a product, size, colour and quantity. Your order details will open in WhatsApp for Mooja Wear to confirm stock, delivery and payment options.</p><p>Want to pay online? PayFast is part of the planned checkout upgrade. Secure live payments require a server-side integration and verified merchant configuration; no payment details are collected on this page.</p><div class="payfast-note"><span aria-hidden="true">↗</span><div><strong>PayFast checkout · Planned integration</strong>For now, use WhatsApp to confirm your order. We'll connect secure PayFast checkout after the backend and merchant settings are configured.</div></div></div><form class="form-card" id="orderForm"><div class="field full"><label for="product">Choose a product</label><select id="product" required></select></div><div class="field"><label for="size">Size</label><select id="size" required><option value="">Choose size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option></select></div><div class="field"><label for="colour">Colour</label><select id="colour" required><option value="">Choose colour</option><option>Black</option><option>White</option><option>Chocolate Brown</option><option>Beige</option><option>Soft Pink</option><option>Soft Sky Blue</option><option>Dark Grey</option><option>Pink</option></select></div><div class="field full"><label for="quantity">Quantity</label><select id="quantity"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div><div class="total"><span>ESTIMATED TOTAL</span><strong id="total">R500</strong></div><button class="form-submit" type="submit">Continue on WhatsApp ↗</button><p class="fine-print">No payment is taken on this page. Mooja Wear will confirm the final amount, stock, delivery and payment method with you.</p></form></div></section>
+    <section class="shoutout" id="shoutout" aria-labelledby="shoutoutTitle"><div class="shoutout-inner"><div class="eyebrow">The Mooja Movement · Est. 2026</div><h2 id="shoutoutTitle">More than a brand.<br><em>It's our identity.</em></h2><p>Born in Venda. Made for the world. Mooja Wear represents confidence, culture and a new generation of streetwear. Every fit tells a story. Every step carries our roots.</p><p class="shoutout-manifesto">WEAR THE MOVEMENT. SHARE THE ENERGY. REPRESENT YOUR ROOTS.</p><p>Got your Mooja Wear fit? Take a picture or video, tag <strong>@mooja_wear_</strong>, and help us put our movement on the map.</p><div class="shoutout-actions"><a class="button" href="https://www.moojawear.co.za" target="_blank" rel="noopener noreferrer">Explore Mooja Wear ↗</a><a class="button outline" href="https://www.instagram.com/mooja_wear_?mdxt=aTJlbXU3azFsdm40&utm_source=qr" target="_blank" rel="noopener noreferrer">Follow the movement ↗</a></div><div class="eyebrow" style="margin-top:32px">Venda roots · African soul · Global street energy</div></div></section>
+  </main>
+  <div class="cart-overlay" id="cartOverlay"></div><aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your cart</h2><button class="cart-close" id="cartClose" type="button">Close ✕</button></div><div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty. Add a piece from the collection to get started.</p></div><div class="cart-foot"><div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">R0</strong></div><button class="cart-checkout" id="cartCheckout" type="button">Order on WhatsApp</button><p class="cart-note">Delivery costs and stock are confirmed by Mooja Wear. Online PayFast checkout is not connected yet.</p></div></aside>
+  <a class="floating-whatsapp" href="https://wa.me/27799900900?text=Hi%20Mooja%20Wear!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" aria-label="Chat with Mooja Wear on WhatsApp">WhatsApp ↗</a>
+  <footer id="contact"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="#home"><img src="Bottom.logo.png" alt="Mooja Wear logo" onerror="this.onerror=null;this.src='Mooja.logoo.png'"></a><div class="eyebrow">Venda roots. Global energy.</div><h2>Stay in<br>your own style.</h2><p>Streetwear rooted in Venda, Limpopo.<br>Venda, Limpopo · South Africa</p></div><div><div class="footer-label">Contact the brand</div><p>WhatsApp: <a href="https://wa.me/27799900900">079 990 0900</a><br>Email: <a href="mailto:moojawear@gmail.com">moojawear@gmail.com</a><br>Website: <a href="https://www.moojawear.co.za" target="_blank" rel="noopener noreferrer">Moojawear.co.za</a></p><a class="button gold" href="#order">Place an order ↗</a></div><div><div class="footer-label">Follow Mooja Wear</div><p>New products, photos and updates from the brand.</p><div class="socials"><a href="https://www.facebook.com/share/19rQCXCecU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.tiktok.com/@mooja_wear?_r=1&_t=ZS-9AcUREsNC0w" target="_blank" rel="noopener noreferrer">TikTok ↗</a><a href="https://www.instagram.com/mooja_wear_?mdxt=aTJlbXU3azFsdm40&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/27799900900" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div></div><div class="copyright">© <span id="year"></span> MOOJA WEAR. ALL RIGHTS RESERVED. · ESTABLISHED 2026</div></div></footer>
+  <script>
+    const BRAND={whatsapp:'27799900900'};
+    // These filenames must match the image files already uploaded to your GitHub Pages repository.
+    const products=[
+      {name:'The ASE OSD',price:500,desc:'Your everyday statement tee.',img:'White.Front.png',back:'White.back.png',isNew:true},
+      {name:'Pocket Size Logo',price:400,desc:'A quiet logo. A confident fit.',img:'White.Front.png',back:'White.back.plain.png',salePrice:350,isNew:true},
+      {name:'Vendaland OSD Tee',price:500,desc:'Relaxed fit. Strong energy.',img:'White.Front.png',back:'White.back2.png'},
+      {name:'Big Coin OSD',price:500,desc:'Off-duty, done right.',img:'Front.coin.png',back:'White.back.plain.png',salePrice:450},
+      {name:'Gennge OSD',price:500,desc:'An everyday essential with presence.',img:'Black.back.png',back:'Black.1.png'},
+      {name:'AFL OSD',price:500,desc:'A clean finish to the everyday fit.',img:'White.Front.png',back:'White.back3.png'},
+      // New product slots: replace these filenames with the photos you upload to GitHub.
+      {name:'New Drop 07',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product07.Front.png',back:'Product07.Back.png',isNew:true},
+      {name:'New Drop 08',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product08.Front.png',back:'Product08.Back.png',isNew:true},
+      {name:'New Drop 09',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product09.Front.png',back:'Product09.Back.png',isNew:true},
+      {name:'New Drop 10',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product10.Front.png',back:'Product10.Back.png',isNew:true},
+      {name:'New Drop 11',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product11.Front.png',back:'Product11.Back.png',isNew:true},
+      {name:'New Drop 12',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product12.Front.png',back:'Product12.Back.png',isNew:true},
+      {name:'New Drop 13',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product13.Front.png',back:'Product13.Back.png',isNew:true},
+      {name:'New Drop 14',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product14.Front.png',back:'Product14.Back.png',isNew:true},
+      {name:'New Drop 15',price:500,desc:'New Mooja Wear piece — add your product photos.',img:'Product15.Front.png',back:'Product15.Back.png',isNew:true}
+    ];
+    const money=n=>'R'+Number(n).toLocaleString('en-ZA');
+    const grid=document.getElementById('productGrid'),productSelect=document.getElementById('product'),quantitySelect=document.getElementById('quantity'),totalEl=document.getElementById('total');
+    let activeFilter='all';
+    const cart=[];
+    const sizeOptions=['XS','S','M','L','XL','2XL','3XL','4XL'];
+    const colourOptions=['Black','White','Chocolate Brown','Beige','Soft Pink','Soft Sky Blue','Dark Grey','Pink'];
+    const currentPrice=p=>p.salePrice||p.price;
+    function fillSelects(){products.forEach((p,i)=>{const label=`${p.name} — ${money(currentPrice(p))}${p.salePrice?' (Promo)':''}`;[productSelect,document.getElementById('layProduct')].forEach(s=>{const o=document.createElement('option');o.value=String(i);o.textContent=label;s.appendChild(o)})})}
+    function showSide(img,p,side,front,back,status){const src=side==='back'?p.back:p.img;img.style.display='';const photo=img.parentElement;const tags=photo.querySelector('.product-tags');img.onerror=()=>{img.onerror=null;img.removeAttribute('src');img.style.display='none';let placeholder=photo.querySelector('.product-image-placeholder');if(!placeholder){placeholder=document.createElement('div');placeholder.className='product-image-placeholder';placeholder.innerHTML='<span>＋</span>PHOTO COMING SOON';photo.insertBefore(placeholder,tags)}status.textContent='Add image file: '+src};img.onload=()=>{const placeholder=photo.querySelector('.product-image-placeholder');if(placeholder)placeholder.remove();img.style.display=''};img.src=src;img.alt=p.name+' — '+side+' view';front.setAttribute('aria-pressed',String(side==='front'));back.setAttribute('aria-pressed',String(side==='back'));status.textContent=''}
+    function renderProducts(){grid.innerHTML='';const shown=products.map((p,i)=>({p,i})).filter(({p})=>activeFilter==='new'?p.isNew:activeFilter==='promo'?Boolean(p.salePrice):true);document.getElementById('collectionTitle').innerHTML=activeFilter==='new'?'Fresh from<br>the studio.':activeFilter==='promo'?'Good pieces.<br>Better prices.':'The pieces<br>you live in.';document.getElementById('collectionDescription').textContent=activeFilter==='new'?'Discover the latest additions to the Mooja Wear lineup.':activeFilter==='promo'?'Selected offers while available. Ask us to confirm stock and promotional pricing.':'Browse the pieces, check the front and back, then choose your size and colour to place an order.';if(!shown.length){grid.textContent='No products in this section yet. Check back soon.';return}shown.forEach(({p,i},position)=>{const card=document.createElement('article');card.className='product';const photo=document.createElement('div');photo.className='product-photo';const img=document.createElement('img');img.src=p.img;img.alt=p.name+' — front view';img.width=700;img.height=840;img.loading=position<2?'eager':'lazy';img.decoding='async';if(position===0)img.fetchPriority='high';img.onerror=()=>{img.onerror=null;img.removeAttribute('src');img.style.display='none';let placeholder=photo.querySelector('.product-image-placeholder');if(!placeholder){placeholder=document.createElement('div');placeholder.className='product-image-placeholder';placeholder.innerHTML='<span>＋</span>PHOTO COMING SOON';photo.insertBefore(placeholder,tags)}};const tags=document.createElement('div');tags.className='product-tags';if(p.isNew){const t=document.createElement('span');t.className='tag';t.textContent='Just dropped';tags.append(t)}if(p.salePrice){const t=document.createElement('span');t.className='tag sale';t.textContent='Promo';tags.append(t)}photo.append(img,tags);const switcher=document.createElement('div');switcher.className='switcher';const front=document.createElement('button');front.type='button';front.textContent='Front view';front.setAttribute('aria-pressed','true');const back=document.createElement('button');back.type='button';back.textContent='Back view';back.setAttribute('aria-pressed','false');const status=document.createElement('div');status.className='section-note';status.style.padding='0 10px';status.setAttribute('aria-live','polite');front.addEventListener('click',()=>showSide(img,p,'front',front,back,status));back.addEventListener('click',()=>showSide(img,p,'back',front,back,status));switcher.append(front,back);const info=document.createElement('div');info.className='product-info';const heading=document.createElement('div');heading.className='product-heading';const name=document.createElement('h3');name.textContent=p.name;const price=document.createElement('div');price.className='price';if(p.salePrice){const old=document.createElement('span');old.className='old-price';old.textContent=money(p.price);price.append(old)}price.append(document.createTextNode(money(currentPrice(p))));heading.append(name,price);const desc=document.createElement('p');desc.textContent=p.desc;const order=document.createElement('button');order.type='button';order.className='product-order';order.textContent='Add to cart +';order.addEventListener('click',()=>addCartItem(i));info.append(heading,desc,order);card.append(photo,switcher,status,info);grid.append(card)})}
+
+    function addCartItem(index){const size=prompt('Choose size: XS, S, M, L, XL, 2XL, 3XL or 4XL','L');if(!size)return;if(!sizeOptions.includes(size.trim().toUpperCase())){alert('Please enter a listed size.');return}const colour=prompt('Choose colour: Black, White, Chocolate Brown, Beige, Soft Pink, Soft Sky Blue, Dark Grey or Pink','Black');if(!colour)return;const found=colourOptions.find(c=>c.toLowerCase()===colour.trim().toLowerCase());if(!found){alert('Please enter a listed colour.');return}const existing=cart.find(x=>x.index===index&&x.size===size.trim().toUpperCase()&&x.colour===found);if(existing)existing.qty++;else cart.push({index,size:size.trim().toUpperCase(),colour:found,qty:1});renderCart();openCart()}
+    function renderCart(){const wrap=document.getElementById('cartItems');wrap.innerHTML='';let count=0,total=0;if(!cart.length){wrap.innerHTML='<p class="cart-empty">Your cart is empty. Add a piece from the collection to get started.</p>'}cart.forEach((item,i)=>{const p=products[item.index],sum=currentPrice(p)*item.qty;count+=item.qty;total+=sum;const row=document.createElement('div');row.className='cart-item';const top=document.createElement('div');top.className='cart-item-top';const details=document.createElement('div');const name=document.createElement('div');name.className='cart-item-name';name.textContent=p.name;const meta=document.createElement('div');meta.className='cart-item-meta';meta.textContent=`${item.colour} · Size ${item.size} · ${money(currentPrice(p))} each`;details.append(name,meta);const price=document.createElement('strong');price.textContent=money(sum);top.append(details,price);const controls=document.createElement('div');controls.className='cart-item-controls';const minus=document.createElement('button');minus.type='button';minus.textContent='−';minus.setAttribute('aria-label','Decrease quantity');minus.onclick=()=>{item.qty--;if(item.qty<=0)cart.splice(i,1);renderCart()};const qty=document.createElement('span');qty.textContent=item.qty;const plus=document.createElement('button');plus.type='button';plus.textContent='+';plus.setAttribute('aria-label','Increase quantity');plus.onclick=()=>{item.qty++;renderCart()};const remove=document.createElement('button');remove.type='button';remove.className='remove';remove.textContent='Remove';remove.onclick=()=>{cart.splice(i,1);renderCart()};controls.append(minus,qty,plus,remove);row.append(top,controls);wrap.append(row)});document.getElementById('cartCount').textContent=count;document.getElementById('cartSubtotal').textContent=money(total)}
+    function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('cartOverlay').classList.add('open');document.getElementById('cartDrawer').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');document.getElementById('cartDrawer').setAttribute('aria-hidden','true');document.body.style.overflow=''}
+    document.getElementById('cartOpen').addEventListener('click',openCart);document.getElementById('cartClose').addEventListener('click',closeCart);document.getElementById('cartOverlay').addEventListener('click',closeCart);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});document.getElementById('cartCheckout').addEventListener('click',()=>{if(!cart.length){alert('Your cart is empty.');return}const lines=cart.map((item,i)=>{const p=products[item.index];return `${i+1}. ${p.name} | ${item.colour} | Size ${item.size} | Qty ${item.qty} | ${money(currentPrice(p)*item.qty)}`});const total=cart.reduce((sum,item)=>sum+currentPrice(products[item.index])*item.qty,0);const msg=`Hi Mooja Wear! I would like to order from my cart:
+
+${lines.join('\n')}
+
+Estimated subtotal: ${money(total)}
+Please confirm stock, delivery costs and payment options. Thank you!`;window.open('https://wa.me/'+BRAND.whatsapp+'?text='+encodeURIComponent(msg),'_blank','noopener')});
+    function updateTotal(){const p=products[Number(productSelect.value)||0],qty=Number(quantitySelect.value)||1;totalEl.textContent=money(currentPrice(p)*qty)}
+    document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderProducts()}));
+    document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const p=products[Number(productSelect.value)||0],size=document.getElementById('size').value,colour=document.getElementById('colour').value,qty=Number(quantitySelect.value)||1;if(!size||!colour){alert('Please choose a size and colour.');return}const msg=`Hi Mooja Wear! I would like to order:\n\nProduct: ${p.name}\nUnit price: ${money(currentPrice(p))}${p.salePrice?' (promo price)':''}\nSize: ${size}\nColour: ${colour}\nQuantity: ${qty}\nEstimated total: ${money(currentPrice(p)*qty)}\n\nPlease confirm stock, delivery costs and payment options. Thank you!`;window.open('https://wa.me/'+BRAND.whatsapp+'?text='+encodeURIComponent(msg),'_blank','noopener')});
+    document.getElementById('laybuyForm').addEventListener('submit',e=>{e.preventDefault();const p=products[Number(document.getElementById('layProduct').value)||0],size=document.getElementById('laySize').value,colour=document.getElementById('layColour').value,deposit=document.getElementById('layDeposit').value,frequency=document.getElementById('layFrequency').value,notes=document.getElementById('layNotes').value.trim();if(!size||!colour){alert('Please choose a size and colour.');return}const msg=`Hi Mooja Wear! I would like to enquire about Lay-Buy.\n\nProduct: ${p.name}\nListed price: ${money(currentPrice(p))}\nSize: ${size}\nColour: ${colour}\nDeposit in mind: ${deposit?money(Number(deposit)):'Please advise'}\nPreferred instalments: ${frequency}\nNotes: ${notes||'None'}\n\nPlease confirm availability and the Lay-Buy terms. Thank you!`;window.open('https://wa.me/'+BRAND.whatsapp+'?text='+encodeURIComponent(msg),'_blank','noopener')});
+    const menuToggle=document.getElementById('menuToggle'),nav=document.getElementById('mainNav');menuToggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'Close ✕':'Menu ☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='Menu ☰'}));
+    fillSelects();renderProducts();updateTotal();productSelect.addEventListener('change',updateTotal);quantitySelect.addEventListener('change',updateTotal);document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
