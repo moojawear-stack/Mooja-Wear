@@ -437,7 +437,27 @@
     @media(max-width:650px){.customer-shoutouts{padding:52px 0}.shoutout-heading{display:block}.shoutout-heading p{margin-top:14px}.shoutout-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shoutout-card img,.shoutout-card video{height:210px}.shoutout-submit{padding:16px}}
     @media(max-width:390px){.shoutout-gallery{grid-template-columns:1fr}.shoutout-card img,.shoutout-card video{height:260px}}
 
+  
   </style>
+
+  <style>
+    /* Mooja Wear mobile product images: compact, consistent, and swipe-friendly */
+    @media (max-width: 650px) {
+      .product-photo > img {
+        width: 100%;
+        height: clamp(190px, 62vw, 270px);
+        aspect-ratio: auto;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    @media (max-width: 380px) {
+      .product-photo > img {
+        height: clamp(190px, 62vw, 235px);
+      }
+    }
+  </style>
+
 </head>
 <body>
   <div class="announcement" aria-label="Brand announcement"><div class="announcement-track"><span>Venda roots</span><span>✦</span><span>African soul</span><span>✦</span><span>Global street energy</span><span>✦</span><span>Established 2026</span><span>✦</span><span>Venda roots</span><span>✦</span><span>African soul</span><span>✦</span><span>Global street energy</span><span>✦</span><span>Established 2026</span><span>✦</span></div></div>
