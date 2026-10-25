@@ -417,6 +417,22 @@
     }
 
 
+
+    /* Worn by the Community lookbook */
+    .community-lookbook{padding:72px 0;background:#f4f1eb;color:#171714}
+    .community-lookbook .eyebrow{color:#76633e}
+    .community-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
+    .community-heading h2{font-size:clamp(34px,5.2vw,60px);line-height:.98;letter-spacing:-1.8px;margin:12px 0 0;text-transform:uppercase}
+    .community-heading p{max-width:410px;color:#625e57;line-height:1.7;margin:0}
+    .community-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;align-items:stretch}
+    .community-card{margin:0;min-width:0;background:#fff;border:1px solid #e3ded4;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(25,22,17,.06)}
+    .community-card img{display:block;width:100%;height:clamp(220px,29vw,390px);object-fit:cover;background:#e8e3db}
+    .community-card figcaption{padding:13px 12px 15px;font-size:12px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;color:#4d493f}
+    .community-card figcaption strong{display:block;font-size:13px;color:#171714;letter-spacing:.025em;margin-bottom:4px}
+    @media(max-width:900px){.community-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.community-card img{height:300px}}
+    @media(max-width:650px){.community-lookbook{padding:52px 0}.community-heading{display:block}.community-heading p{margin-top:14px}.community-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.community-card img{height:clamp(220px,65vw,320px)}.community-card figcaption{padding:11px 10px}}
+    @media(max-width:390px){.community-gallery{grid-template-columns:1fr}.community-card img{height:360px}}
+
     /* Customer shout-outs */
     .customer-shoutouts{padding:70px 0;background:#101010;color:#f8f7f4;border-top:1px solid #393630}
     .customer-shoutouts .eyebrow{color:var(--gold)}
@@ -437,34 +453,14 @@
     @media(max-width:650px){.customer-shoutouts{padding:52px 0}.shoutout-heading{display:block}.shoutout-heading p{margin-top:14px}.shoutout-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shoutout-card img,.shoutout-card video{height:210px}.shoutout-submit{padding:16px}}
     @media(max-width:390px){.shoutout-gallery{grid-template-columns:1fr}.shoutout-card img,.shoutout-card video{height:260px}}
 
-  
   </style>
-
-  <style>
-    /* Mooja Wear mobile product images: compact, consistent, and swipe-friendly */
-    @media (max-width: 650px) {
-      .product-photo > img {
-        width: 100%;
-        height: clamp(190px, 62vw, 270px);
-        aspect-ratio: auto;
-        object-fit: contain;
-        object-position: center;
-      }
-    }
-    @media (max-width: 380px) {
-      .product-photo > img {
-        height: clamp(190px, 62vw, 235px);
-      }
-    }
-  </style>
-
 </head>
 <body>
   <div class="announcement" aria-label="Brand announcement"><div class="announcement-track"><span>Venda roots</span><span>✦</span><span>African soul</span><span>✦</span><span>Global street energy</span><span>✦</span><span>Established 2026</span><span>✦</span><span>Venda roots</span><span>✦</span><span>African soul</span><span>✦</span><span>Global street energy</span><span>✦</span><span>Established 2026</span><span>✦</span></div></div>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="#home" aria-label="Mooja Wear home"><img src="Mooja.logoo.png" alt="Mooja Wear logo"></a>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
-    <nav class="nav" id="mainNav" aria-label="Main navigation"><a href="#story">Our point of view</a><a href="#collection">Shop</a><a href="#shoutout">The Movement</a><a href="#customer-shoutouts">Customer shout-outs</a><a href="#laybuy">Lay-Buy</a><a href="#contact">Contact</a></nav>
+    <nav class="nav" id="mainNav" aria-label="Main navigation"><a href="#story">Our point of view</a><a href="#collection">Shop</a><a href="#shoutout">The Movement</a><a href="#community">Community</a><a href="#customer-shoutouts">Customer shout-outs</a><a href="#laybuy">Lay-Buy</a><a href="#contact">Contact</a></nav>
     <a class="header-cta" href="#collection">Shop the edit ↗</a><button class="cart-button" id="cartOpen" type="button" aria-label="Open shopping cart">Cart <span class="cart-count" id="cartCount">0</span></button>
   </div></header>
   <main id="home">
@@ -479,6 +475,23 @@
     <section class="laybuy" id="laybuy"><div class="container split"><div class="laybuy-copy"><div class="eyebrow">Make it yours</div><h2>Your fit.<br>Your pace.</h2><p>Found the piece you want? Ask us about Lay-Buy and discuss a payment arrangement that works for you before committing.</p><ul class="bullets"><li>Choose your product, size and colour.</li><li>Tell us your preferred deposit and instalment timing.</li><li>We'll discuss availability and confirm the terms directly.</li></ul><p>Lay-Buy arrangements are enquiries only until Mooja Wear confirms the terms with you.</p></div><form class="form-card" id="laybuyForm"><div class="field full"><label for="layProduct">Product</label><select id="layProduct" required></select></div><div class="field"><label for="laySize">Size</label><select id="laySize" required><option value="">Choose size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option></select></div><div class="field"><label for="layColour">Colour</label><select id="layColour" required><option value="">Choose colour</option><option>Black</option><option>White</option><option>Chocolate Brown</option><option>Beige</option><option>Soft Pink</option><option>Soft Sky Blue</option><option>Dark Grey</option><option>Pink</option></select></div><div class="field"><label for="layDeposit">Deposit in mind (R)</label><input id="layDeposit" type="number" min="0" step="10" placeholder="e.g. 150"></div><div class="field"><label for="layFrequency">Instalments</label><select id="layFrequency"><option>Weekly</option><option>Every two weeks</option><option>Monthly</option><option>Discuss with me</option></select></div><div class="field full"><label for="layNotes">Extra notes (optional)</label><textarea id="layNotes" placeholder="Preferred payment dates or questions"></textarea></div><button class="form-submit" type="submit">Enquire on WhatsApp ↗</button><p class="fine-print">This form prepares a WhatsApp enquiry; it does not automatically approve credit or create a payment agreement.</p></form></div></section>
     <section id="order"><div class="container split"><div class="order-copy"><div class="eyebrow">Your order starts here</div><h2>Choose your<br>next favourite.</h2><p>Select a product, size, colour and quantity. Your order details will open in WhatsApp for Mooja Wear to confirm stock, delivery and payment options.</p><p>Want to pay online? PayFast is part of the planned checkout upgrade. Secure live payments require a server-side integration and verified merchant configuration; no payment details are collected on this page.</p><div class="payfast-note"><span aria-hidden="true">↗</span><div><strong>PayFast checkout · Planned integration</strong>For now, use WhatsApp to confirm your order. We'll connect secure PayFast checkout after the backend and merchant settings are configured.</div></div></div><form class="form-card" id="orderForm"><div class="field full"><label for="product">Choose a product</label><select id="product" required></select></div><div class="field"><label for="size">Size</label><select id="size" required><option value="">Choose size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option></select></div><div class="field"><label for="colour">Colour</label><select id="colour" required><option value="">Choose colour</option><option>Black</option><option>White</option><option>Chocolate Brown</option><option>Beige</option><option>Soft Pink</option><option>Soft Sky Blue</option><option>Dark Grey</option><option>Pink</option></select></div><div class="field full"><label for="quantity">Quantity</label><select id="quantity"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div><div class="total"><span>ESTIMATED TOTAL</span><strong id="total">R500</strong></div><button class="form-submit" type="submit">Continue on WhatsApp ↗</button><p class="fine-print">No payment is taken on this page. Mooja Wear will confirm the final amount, stock, delivery and payment method with you.</p></form></div></section>
     <section class="shoutout" id="shoutout" aria-labelledby="shoutoutTitle"><div class="shoutout-inner"><div class="eyebrow">The Mooja Movement · Est. 2026</div><h2 id="shoutoutTitle">More than a brand.<br><em>It's our identity.</em></h2><p>Born in Venda. Made for the world. Mooja Wear represents confidence, culture and a new generation of streetwear. Every fit tells a story. Every step carries our roots.</p><p class="shoutout-manifesto">WEAR THE MOVEMENT. SHARE THE ENERGY. REPRESENT YOUR ROOTS.</p><p>Got your Mooja Wear fit? Take a picture or video, tag <strong>@mooja_wear_</strong>, and help us put our movement on the map.</p><div class="shoutout-actions"><a class="button" href="https://www.moojawear.co.za" target="_blank" rel="noopener noreferrer">Explore Mooja Wear ↗</a><a class="button outline" href="https://www.instagram.com/mooja_wear_?mdxt=aTJlbXU3azFsdm40&utm_source=qr" target="_blank" rel="noopener noreferrer">Follow the movement ↗</a></div><div class="eyebrow" style="margin-top:32px">Venda roots · African soul · Global street energy</div></div></section>
+
+
+    <section class="community-lookbook" id="community" aria-labelledby="communityTitle">
+      <div class="container">
+        <div class="community-heading">
+          <div><div class="eyebrow">Real fits · Venda roots · Global energy</div><h2 id="communityTitle">Worn by<br>the community.</h2></div>
+          <p>Different people. Different ways to wear it. One Mooja movement. Explore the looks and find your own way to represent the brand.</p>
+        </div>
+        <div class="community-gallery">
+          <figure class="community-card"><img src="Inno(1).jpeg" alt="Mooja Wear white T-shirt styled with denim" loading="lazy" decoding="async"><figcaption><strong>Everyday confidence</strong>Clean essentials · Your own lane</figcaption></figure>
+          <figure class="community-card"><img src="Muk.png" alt="Mooja Wear grey oversized T-shirt and black cap" loading="lazy" decoding="async"><figcaption><strong>Keep it effortless</strong>Premium basics · Everyday energy</figcaption></figure>
+          <figure class="community-card"><img src="Funo2.jpeg" alt="Mooja Wear black T-shirt with statement back artwork" loading="lazy" decoding="async"><figcaption><strong>Make a statement</strong>Back-print style · Stand out</figcaption></figure>
+          <figure class="community-card"><img src="Funo.png" alt="Mooja Wear white T-shirt with pink chest logo" loading="lazy" decoding="async"><figcaption><strong>Wear it your way</strong>Subtle logo · Bold identity</figcaption></figure>
+          <figure class="community-card"><img src="IMG_2554(1).jpeg" alt="Mooja Wear black graphic T-shirt shown from the back" loading="lazy" decoding="async"><figcaption><strong>Street energy</strong>Made in Venda · Made to move</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
     <section class="customer-shoutouts" id="customer-shoutouts" aria-labelledby="customerShoutoutsTitle">
       <div class="container">
