@@ -47,7 +47,7 @@ footer{background:#f3f1ed;padding:42px 4%;display:grid;grid-template-columns:2fr
   <nav class="nav" aria-label="Main navigation">
     <a class="logo" href="#" aria-label="Mooja Wear home">MOOJA<small>WEAR</small></a>
     <div class="navlinks"><a href="#shop">SHOP ALL</a><a href="#collections">COLLECTIONS</a><a href="#story">OUR STORY</a></div>
-    <div class="navactions"><button onclick="openAdmin()">MANAGE STORE</button><button onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></div>
+    <div class="navactions"><button onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></div>
   </nav>
 </header>
 <main>
@@ -66,16 +66,7 @@ footer{background:#f3f1ed;padding:42px 4%;display:grid;grid-template-columns:2fr
 </section>
 <section class="story" id="story"><div><div class="eyebrow">More than what you wear</div><h2>STREETWEAR.<br>YOUR WAY.</h2><p>Mooja Wear is about expressing yourself without asking for permission. Clean essentials, confident graphics, and relaxed fits made to move with you.</p></div><a href="#shop" class="btn" style="background:#fff;color:#171717;border-color:#fff">Explore Mooja Wear ↗</a></section>
 </main>
-<footer><div><a class="logo" href="#">MOOJA<small>WEAR</small></a><p class="muted">Streetwear made different.</p><p class="muted">© <span id="year"></span> Mooja Wear</p></div><div><h3>Shop</h3><a href="#shop">All products</a><a href="#collections">Collections</a><a href="#shop" onclick="setCollection('New Arrivals')">New arrivals</a></div><div><h3>Help</h3><a href="#story">About Mooja</a><a href="#" onclick="openCart();return false">Shopping bag</a><a href="#" onclick="openAdmin();return false">Manage store</a></div></footer>
-<div class="overlay" id="admin-overlay" role="dialog" aria-modal="true" aria-labelledby="admin-title"><div class="panel"><div class="panel-head"><h2 id="admin-title">Manage your store</h2><button class="close" onclick="closeAdmin()" aria-label="Close">×</button></div><p class="admin-note">Add your own product photo, name, price, and collection. Changes are saved in this browser on this device. For a live shop shared with all customers, a shared database is needed.</p><form class="admin-form" id="product-form">
-<label>Product name<input required id="new-name" placeholder="Mooja Oversized Tee"></label>
-<label>Price in rand (R)<input required id="new-price" type="number" min="1" step="1" placeholder="400"></label>
-<label>Collection<select id="new-collection"><option>Oversized</option><option>Essentials</option><option>Graphic Tees</option><option>New Arrivals</option></select></label>
-<label>Colour<input id="new-colour" placeholder="Black, White"></label>
-<label class="wide">Product image<input id="new-image" type="file" accept="image/*"></label>
-<label class="wide">Or paste image URL<input id="new-image-url" type="url" placeholder="https://..."></label>
-<label class="wide">Description<textarea id="new-description" rows="2" placeholder="Fit, fabric, details..."></textarea></label>
-<button class="btn" type="submit">Add product</button></form><hr style="border:0;border-top:1px solid #eee;margin:24px 0"><h3>Product folders / collections</h3><p class="admin-note">Use the collection selector above to place products in Oversized, Essentials, Graphic Tees, or New Arrivals. Each collection acts as a product folder.</p></div></div>
+<footer><div><a class="logo" href="#">MOOJA<small>WEAR</small></a><p class="muted">Streetwear made different.</p><p class="muted">© <span id="year"></span> Mooja Wear</p></div><div><h3>Shop</h3><a href="#shop">All products</a><a href="#collections">Collections</a><a href="#shop" onclick="setCollection('New Arrivals')">New arrivals</a></div><div><h3>Help</h3><a href="#story">About Mooja</a><a href="#" onclick="openCart();return false">Shopping bag</a></div></footer>
 <div class="overlay" id="cart-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-title"><div class="panel"><div class="panel-head"><h2 id="cart-title">Your shopping bag</h2><button class="close" onclick="closeCart()" aria-label="Close">×</button></div><div id="cart-content"></div></div></div>
 <script>
 const starterProducts=[
@@ -104,9 +95,7 @@ function setCollection(c){document.getElementById("collection-filter").value=c;r
 function addToCart(id){const p=products.find(x=>x.id===id);if(!p)return;cart.push(id);document.getElementById("cart-count").textContent=cart.length;const b=document.querySelector(`button[onclick="addToCart('${id}')"]`);if(b){b.textContent="Added ✓";setTimeout(()=>{if(b.isConnected)b.textContent="Add to bag +"},1000)}}
 function openCart(){const o=document.getElementById("cart-overlay");o.classList.add("open");const grouped={};cart.forEach(id=>grouped[id]=(grouped[id]||0)+1);let total=0;document.getElementById("cart-content").innerHTML=cart.length?`<div class="cart-list">${Object.entries(grouped).map(([id,n])=>{const p=products.find(x=>x.id===id);if(!p)return "";total+=p.price*n;return `<div class="cart-row"><span>${esc(p.name)} × ${n}</span><strong>R${(p.price*n).toLocaleString("en-ZA")}</strong></div>`}).join("")}</div><div class="cart-total">Total: R${total.toLocaleString("en-ZA")}</div><p class="admin-note">Demo cart only — checkout/payment has not been connected yet.</p><a class="btn" style="margin-top:15px" href="https://wa.me/?text=${encodeURIComponent("Hi Mooja Wear, I would like to order: "+cart.map(id=>{const p=products.find(x=>x.id===id);return p?p.name+" (R"+p.price+")":""}).join(", "))}" target="_blank" rel="noopener">Enquire on WhatsApp ↗</a><button class="btn" style="margin:15px 0 0 8px;background:white;color:#171717" onclick="cart=[];document.getElementById('cart-count').textContent='0';openCart()">Clear bag</button>`:'<p>Your bag is empty. Add a product to get started.</p><a class="btn" href="#shop" onclick="closeCart()">Shop products</a>'}
 function closeCart(){document.getElementById("cart-overlay").classList.remove("open")}
-function openAdmin(){document.getElementById("admin-overlay").classList.add("open")}
-function closeAdmin(){document.getElementById("admin-overlay").classList.remove("open")}
-document.getElementById("product-form").addEventListener("submit",async e=>{e.preventDefault();const file=document.getElementById("new-image").files[0];let image=document.getElementById("new-image-url").value.trim();if(file){image=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}const p={id:"custom-"+Date.now(),name:document.getElementById("new-name").value.trim(),price:Number(document.getElementById("new-price").value),collection:document.getElementById("new-collection").value,colour:document.getElementById("new-colour").value.trim()||"Black",description:document.getElementById("new-description").value.trim(),tag:"",image};products.unshift(p);renderProducts();e.target.reset();closeAdmin();document.getElementById("shop").scrollIntoView({behavior:"smooth"});});
+});
 document.querySelectorAll(".overlay").forEach(o=>o.addEventListener("click",e=>{if(e.target===o)o.classList.remove("open")}));document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".overlay").forEach(o=>o.classList.remove("open"))});
 document.getElementById("year").textContent=new Date().getFullYear();document.getElementById("cart-count").textContent="0";renderProducts();
 </script>
