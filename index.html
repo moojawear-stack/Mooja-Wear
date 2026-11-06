@@ -52,7 +52,7 @@ footer{background:#f0e9df;padding:48px 4%;display:grid;grid-template-columns:2fr
 <main>
 <section class="hero">
   <div class="hero-copy"><div class="eyebrow">African roots. Street-level attitude.</div><h1>WEAR YOUR<br><span>OWN STORY.</span></h1><p>Bold graphics. Relaxed fits. Made to last. MOOJA WEAR brings African streetwear energy to everyday style. Find your fit and make it yours.</p><a class="btn" href="#shop">Shop the latest drop&nbsp; ↗</a></div>
-  <div class="hero-art" aria-label="Mooja Wear streetwear campaign"><img class="hero-campaign-img" src="Black.1.png" alt="MOOJA WEAR black T-shirt campaign photo"><div class="hero-stamp">MADE TO LAST · EST. 2026</div></div>
+  <div class="hero-art" aria-label="Mooja Wear streetwear campaign"><img class="hero-campaign-img" src="Inno.png" alt="MOOJA WEAR black T-shirt campaign photo"><div class="hero-stamp">MADE TO LAST · EST. 2026</div></div>
 </section>
 <section class="section" id="collections">
   <div class="section-head"><div><div class="eyebrow">Find your fit</div><h2>Shop by collection</h2></div><span class="muted">Built for everyday wear.</span></div>
@@ -69,12 +69,12 @@ footer{background:#f0e9df;padding:48px 4%;display:grid;grid-template-columns:2fr
 <div class="overlay" id="cart-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-title"><div class="panel"><div class="panel-head"><h2 id="cart-title">Your shopping bag</h2><button class="close" onclick="closeCart()" aria-label="Close">×</button></div><div id="cart-content"></div></div></div>
 <script>
 const starterProducts=[
-["Mooja Special Oversized Tee",400,"Oversized","Black","NEW"],
-["Essential Boxy T-shirt",350,"Essentials","White","ESSENTIAL"],
-["Mooja Logo Tee",320,"Graphic Tees","Black","BESTSELLER"],
-["Heavy Oversized Tee",420,"Oversized","Beige","NEW"],
-["Everyday Essential Tee",300,"Essentials","White",""],
-["Street Graphic Tee",380,"Graphic Tees","Chocolate","GRAPHIC"],
+["Mooja Boxy Oversized Tee",500,"Oversized","Black","NEW"],
+["Essential Boxy T-shirt",R500,"Essentials","White","ESSENTIAL"],
+["Mooja Logo Tee",400,"Graphic Tees","Black","BESTSELLER"],
+["Heavy Oversized Tee",500,"Oversized","Beige","NEW"],
+["Everyday Essential Tee",500,"Essentials","White",""],
+["Street Graphic Tee",500,"Graphic Tees","Chocolate","GRAPHIC"],
 ["Relaxed Fit Tee",350,"Oversized","Navy Blue",""],
 ["Mooja Signature Tee",330,"Essentials","Dark Grey",""],
 ["Back Print Oversized Tee",420,"Graphic Tees","Black",""],
@@ -84,7 +84,7 @@ const starterProducts=[
 ["Classic Cotton Tee",280,"Essentials","White",""],
 ["Drop Two Oversized Tee",420,"New Arrivals","Chocolate Brown","NEW"],
 ["Mooja Statement Tee",400,"New Arrivals","Navy Blue","NEW"]
-].map((p,i)=>({id:"seed-"+i,name:p[0],price:p[1],collection:p[2],colour:p[3],tag:p[4],description:"Comfortable everyday streetwear from Mooja Wear.",image:({0:"Black.1.png",2:"Front.coin.png",8:"Black.back.png",11:"Murendi.png",13:"Funo.png",14:"Funo2.png"})[i]||"",seed:true}));
+].map((p,i)=>({id:"seed-"+i,name:p[0],price:p[1],collection:p[2],colour:p[3],tag:p[4],description:"Comfortable everyday streetwear from Mooja Wear.",image:({0:"White.back2.png",2:"White.back3.png",8:"White.back.png",11:"Black.back.png",13:"Black.1.png",14:"Funo2.png"})[i]||"",seed:true}));
 let products=[...starterProducts],cart=[];
 const palettes={"Black":["#222","#eee"],"White":["#f8f7f3","#171717"],"Beige":["#d9cbb6","#30291f"],"Chocolate":["#593b2e","#f4e6d9"],"Chocolate Brown":["#593b2e","#f4e6d9"],"Navy Blue":["#26354b","#f6f4ed"],"Dark Grey":["#555","#f5f5f5"],"Soft Pink":["#e9bfc7","#4b2630"],"Olive":["#74765a","#f7f2e6"]};
 function shirtSVG(p){const c=(palettes[p.colour]||["#d9d1c5","#171717"])[0],ink=(palettes[p.colour]||["#d9d1c5","#171717"])[1];return `<svg viewBox="0 0 240 260" role="img" aria-label="${esc(p.name)} illustration"><path d="M78 25 L101 14 Q120 26 139 14 L162 25 L216 65 L190 103 L166 87 L173 238 L67 238 L74 87 L50 103 L24 65 Z" fill="${c}" stroke="#00000018" stroke-width="2"/><path d="M101 15 Q120 48 139 15" fill="none" stroke="#00000035" stroke-width="4"/><text x="120" y="123" text-anchor="middle" fill="${ink}" font-size="18" font-weight="900" letter-spacing="-1.5">MOOJA</text><text x="120" y="139" text-anchor="middle" fill="${ink}" font-size="8" font-weight="700" letter-spacing="3">WEAR</text></svg>`}
