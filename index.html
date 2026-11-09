@@ -1,91 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="NEON APOCALYPSE — heavyweight streetwear, oversized cuts and limited drops.">
-  <title>NEON APOCALYPSE // N_A LABS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050605"><title>NEON APOCALYPSE | N_A LABS</title>
+<style>
+:root{--bg:#050605;--surface:#151815;--surface2:#202520;--lime:#72ff19;--text:#f7f8f5;--muted:#9ba39a;--line:#303830}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;padding-bottom:88px}button,input{font:inherit}button{cursor:pointer;color:inherit}
+.promo{text-align:center;background:var(--lime);color:#071000;font-size:10px;font-weight:900;letter-spacing:1.8px;padding:9px}
+header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #242924;position:sticky;top:0;background:#050605f2;backdrop-filter:blur(12px);z-index:5}
+.brand{font-weight:1000;font-style:italic;font-size:18px;letter-spacing:-.8px}.brand span{color:var(--lime)}.brand small{display:block;font-style:normal;color:var(--muted);font-size:8px;letter-spacing:4px;text-align:center;margin-top:3px}
+.headbtn{background:none;border:0;font-size:23px;padding:8px;position:relative}.count{position:absolute;right:0;top:0;background:var(--lime);color:#071000;border-radius:20px;font-size:9px;font-weight:900;padding:3px 6px}
+.search-wrap{padding:13px 16px 4px}.search{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;color:white;padding:13px 15px 13px 42px;outline:none}.search-wrap{position:relative}.search-wrap:before{content:"⌕";position:absolute;left:30px;top:18px;font-size:23px;color:var(--muted)}
+.hero{margin:12px 14px 0;height:300px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(90deg,#030605df 0%,#03060560 58%,#03060512),url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=90') center/cover}
+.hero-copy{position:absolute;left:20px;bottom:23px;max-width:68%}.eyebrow{color:var(--lime);font-size:9px;font-weight:900;letter-spacing:2.5px}.hero h1{font-size:39px;line-height:.9;letter-spacing:-2px;margin:10px 0}.hero h1 span{color:var(--lime)}.hero p{font-size:11px;line-height:1.5;color:#e3e8e1;margin:0 0 15px}.shopbtn{background:var(--lime);border:0;color:#081000;border-radius:30px;padding:12px 18px;font-size:10px;font-weight:1000;letter-spacing:1px}
+.dots{position:absolute;right:16px;bottom:18px;display:flex;gap:6px}.dots i{width:7px;height:7px;background:#ffffff80;border-radius:50%}.dots i:first-child{background:var(--lime)}
+section{padding:25px 15px 0}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.section-head h2{font-size:20px;margin:0;letter-spacing:-.6px}.viewall{background:none;border:0;color:var(--lime);font-size:11px;font-weight:900}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.category{height:125px;border:1px solid #5eea21;border-radius:15px;overflow:hidden;position:relative;background:#181c19;display:flex;align-items:end;padding:10px;text-align:center;justify-content:center}.category img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52}.category:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#030503ed,transparent)}.category span{position:relative;z-index:1;font-size:12px;font-weight:1000}.category small{display:block;color:#c9d2c6;font-size:9px;font-weight:500;margin-top:4px}
+.filters{display:flex;gap:8px;overflow:auto;padding:2px 0 14px;scrollbar-width:none}.filters button{white-space:nowrap;border:1px solid var(--line);background:var(--surface);border-radius:30px;padding:9px 15px;font-size:10px;font-weight:800;color:#c9d0c8}.filters button.active{background:var(--lime);border-color:var(--lime);color:#071000}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product{background:var(--surface);border-radius:14px;overflow:hidden;position:relative}.photo{height:190px;background:#202520;position:relative}.photo img{width:100%;height:100%;object-fit:cover;display:block}.tag{position:absolute;left:9px;top:9px;background:var(--lime);color:#081000;padding:5px 8px;border-radius:20px;font-size:8px;font-weight:1000}.heart{position:absolute;right:9px;top:7px;border:0;background:#0008;border-radius:50%;width:30px;height:30px;font-size:17px}.heart.on{color:var(--lime)}.pinfo{padding:10px}.pname{font-size:11px;font-weight:700;min-height:28px}.price-line{display:flex;justify-content:space-between;align-items:center;margin-top:8px}.price{font-size:15px;color:var(--lime);font-weight:1000}.add{border:1px solid var(--line);background:#0d100e;border-radius:9px;padding:7px 9px;font-size:9px;font-weight:900}.empty{grid-column:1/-1;padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
+.bottom{position:fixed;bottom:0;left:0;right:0;z-index:8;background:#080a08f5;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:9px 5px calc(9px + env(safe-area-inset-bottom));backdrop-filter:blur(14px)}.bottom button{border:0;background:none;color:#b8c0b7;font-size:9px;display:flex;flex-direction:column;align-items:center;gap:4px}.bottom button strong{font-size:21px;font-weight:500}.bottom button.active{color:var(--lime);font-weight:900}
+.overlay{display:none;position:fixed;inset:0;background:#000b;z-index:20}.overlay.open{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(420px,100%);background:#111612;padding:20px;overflow:auto}.drawerhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:14px}.drawerhead h2{font-size:18px}.close{background:none;border:0;font-size:25px}.cartrow{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cartrow img{width:65px;height:75px;object-fit:cover}.cartrow div{flex:1;font-size:11px}.muted{color:var(--muted);font-size:10px}.total{display:flex;justify-content:space-between;margin:22px 0;font-weight:900}.wide{width:100%;padding:14px;border:0;border-radius:30px;background:var(--lime);color:#071000;font-weight:1000;font-size:11px}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:25;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modalbox{background:#151a16;border:1px solid var(--line);border-radius:18px;padding:22px;width:min(390px,100%)}.modalbox h2{font-size:18px}.modalbox label{display:block;font-size:10px;color:var(--muted);margin:15px 0 6px}.modalbox select,.modalbox input{width:100%;background:#080b09;color:white;border:1px solid var(--line);padding:12px;border-radius:9px}
+@media(min-width:760px){body{max-width:1050px;margin:auto}.hero{height:390px}.hero h1{font-size:55px}.categories{grid-template-columns:repeat(3,1fr)}.category{height:180px}.grid{grid-template-columns:repeat(4,1fr)}.photo{height:260px}.bottom{max-width:1050px;left:50%;transform:translateX(-50%);border-radius:16px 16px 0 0}}
+</style></head>
 <body>
-  <div class="announcement">LIMITED DROP_01 — BUILT FOR THE CONCRETE UNDERGROUND</div>
-  <header class="navbar">
-    <a class="logo" href="#" aria-label="N A Labs home">N_A <span>// LABS</span></a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#shop">DROP_01</a><a href="#about">THE UNIFORM</a><a href="#footer">CONTACT</a>
-    </nav>
-    <button class="cart-status" id="cart-toggle" aria-label="Open shopping bag">BAG <span id="cart-count">0</span> <span class="bag-icon">↗</span></button>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-grid"></div>
-      <div class="hero-content">
-        <span class="eyebrow"><i></i> NEW SEASON // DROP_01</span>
-        <h1>REBEL AGAINST<br><span class="glitch-text">THE ORDINARY.</span></h1>
-        <p>Heavyweight essentials. Oversized silhouettes.<br>Made for those who move differently.</p>
-        <a href="#shop" class="btn-primary">EXPLORE THE DROP <span>↘</span></a>
-      </div>
-      <div class="hero-stamp">N_A<br><small>EST. 2026</small></div>
-      <div class="hero-bottom"><span>01 / 03 — CORE PIECES</span><span>DESIGNED TO DISRUPT.</span></div>
-    </section>
-
-    <div class="ticker-wrap" aria-label="Store announcements"><div class="ticker">
-      <span>LIMITED RUNS ONLY ✳</span><span>HEAVYWEIGHT STREETWEAR ✳</span><span>OWN YOUR DIFFERENCE ✳</span><span>LIMITED RUNS ONLY ✳</span><span>HEAVYWEIGHT STREETWEAR ✳</span>
-    </div></div>
-
-    <section class="shop-section" id="shop">
-      <div class="section-heading"><div><span class="eyebrow">// THE FIRST RELEASE</span><h2>[ CORE_PIECES ]</h2></div><p>THREE ESSENTIALS.<br>ZERO COMPROMISE.</p></div>
-      <div class="product-grid" id="product-grid"></div>
-    </section>
-
-    <section class="manifesto" id="about">
-      <span class="eyebrow">// OUR UNIFORM</span>
-      <h2>NOT MADE TO<br><span>BLEND IN.</span></h2>
-      <p>NEON APOCALYPSE is a streetwear concept built around bold graphics, considered details and everyday pieces with presence. Wear it your way.</p>
-    </section>
-  </main>
-
-  <footer id="footer"><a class="logo" href="#">N_A <span>// LABS</span></a><p>THE UNDERGROUND HAS A UNIFORM.</p><small>© 2026 NEON APOCALYPSE. ALL RIGHTS RESERVED.</small></footer>
-
-  <div class="drawer-backdrop" id="drawer-backdrop"></div>
-  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping bag" aria-hidden="true">
-    <div class="cart-header"><div><span class="eyebrow">// YOUR SELECTION</span><h2>[ YOUR_BAG ]</h2></div><button class="icon-btn" id="close-cart" aria-label="Close bag">✕</button></div>
-    <div class="cart-items" id="cart-items-container"><p class="empty-message">Your bag is currently empty.</p></div>
-    <div class="cart-footer">
-      <div class="total-row"><span>SUBTOTAL</span><strong id="cart-total-price">R 0.00</strong></div>
-      <p class="shipping-note">Delivery costs, if applicable, will be confirmed when your order is arranged.</p>
-      <button class="checkout-btn" id="proceed-to-checkout-btn">CONTINUE TO CHECKOUT ↗</button>
-      <form id="checkout-form" class="checkout-form-container" hidden>
-        <div class="form-header"><h3>[ DELIVERY_DETAILS ]</h3><button type="button" class="text-btn" id="back-to-items-btn">← BACK TO BAG</button></div>
-        <label>FULL NAME<input type="text" id="cust-name" autocomplete="name" required placeholder="Your full name"></label>
-        <label>EMAIL ADDRESS<input type="email" id="cust-email" autocomplete="email" required placeholder="you@example.com"></label>
-        <label>PHONE NUMBER<input type="tel" id="cust-phone" autocomplete="tel" required placeholder="e.g. 071 234 5678"></label>
-        <label>DELIVERY ADDRESS<input type="text" id="cust-address" autocomplete="street-address" required placeholder="Street address and suburb"></label>
-        <div class="form-row-split"><label>CITY<input type="text" id="cust-city" autocomplete="address-level2" required placeholder="City"></label><label>POSTAL CODE<input type="text" id="cust-zip" autocomplete="postal-code" required placeholder="Postal code"></label></div>
-        <label>ORDER NOTES <textarea id="cust-notes" rows="2" placeholder="Optional delivery or order notes"></textarea></label>
-        <button type="submit" class="place-order-btn">SEND ORDER VIA WHATSAPP ↗</button>
-        <p class="secure-note">Your order summary will open in WhatsApp for confirmation. No online payment is taken on this demo store.</p>
-      </form>
-    </div>
-  </aside>
-
-  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details">
-    <div class="modal-content"><button class="close-modal" id="close-modal" aria-label="Close product details">✕</button>
-      <div class="modal-body-layout"><div class="modal-img-space" id="modal-image-wrap"></div>
-        <div class="modal-details-space"><span class="eyebrow">// SPEC_SHEET</span><h2 id="modal-product-title"></h2><p class="modal-price" id="modal-product-price"></p><p class="modal-desc" id="modal-product-desc"></p>
-          <label class="size-label">[ SELECT_SIZE ]</label><div class="size-options" id="size-options"></div>
-          <div class="quantity-row"><span>QUANTITY</span><div class="quantity-control"><button id="qty-minus" aria-label="Decrease quantity">−</button><span id="modal-qty">1</span><button id="qty-plus" aria-label="Increase quantity">+</button></div></div>
-          <button class="modal-action-btn" id="modal-add-to-bag">ADD TO BAG +</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="promo">NEW DROP • FREE DELIVERY ON ORDERS OVER R1000</div>
+<header><div class="brand">N_A <span>NEON APOCALYPSE</span><small>C L O T H I N G&nbsp; C O.</small></div><div><button class="headbtn" onclick="focusSearch()" aria-label="Search">⌕</button><button class="headbtn" onclick="openCart()" aria-label="Cart">♧<b class="count" id="count">0</b></button></div></header>
+<div class="search-wrap"><input class="search" id="search" placeholder="Search T-shirts, hats, trousers..." oninput="render()"></div>
+<div class="hero"><div class="hero-copy"><div class="eyebrow">N_A LABS / NEW SEASON</div><h1>DRESS<br>DIFFERENT.<br><span>STAND OUT.</span></h1><p>Streetwear for those who make their own rules.</p><button class="shopbtn" onclick="showCategory('All')">SHOP THE DROP&nbsp; ↗</button></div><div class="dots"><i></i><i></i><i></i><i></i></div></div>
+<section><div class="section-head"><h2>Shop Categories</h2><button class="viewall" onclick="showCategory('All')">VIEW ALL ↗</button></div><div class="categories">
+<button class="category" onclick="showCategory('T-Shirts')"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"><span>T-SHIRTS<small>View collection →</small></span></button>
+<button class="category" onclick="showCategory('Hats')"><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=500&q=80"><span>HATS<small>View collection →</small></span></button>
+<button class="category" onclick="showCategory('Trousers')"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=500&q=80"><span>TROUSERS<small>View collection →</small></span></button>
+</div></section>
+<section id="shop"><div class="section-head"><h2 id="heading">Featured Collection</h2><button class="viewall" onclick="showCategory('All')">VIEW ALL ↗</button></div><div class="filters"><button class="active" data-cat="All" onclick="showCategory('All')">All</button><button data-cat="T-Shirts" onclick="showCategory('T-Shirts')">T-Shirts</button><button data-cat="Hats" onclick="showCategory('Hats')">Hats</button><button data-cat="Trousers" onclick="showCategory('Trousers')">Trousers</button></div><div class="grid" id="products"></div></section>
+<nav class="bottom"><button class="active" onclick="showCategory('All');setNav(this)"><strong>⌂</strong>Home</button><button onclick="document.getElementById('shop').scrollIntoView();setNav(this)"><strong>▦</strong>Categories</button><button onclick="openCart();setNav(this)"><strong>♧</strong>Cart</button><button onclick="showWishlist();setNav(this)"><strong>♡</strong>Wishlist</button><button onclick="alert('Account sign-in can be connected when you launch your store.');setNav(this)"><strong>♙</strong>Account</button></nav>
+<div class="overlay" id="cart"><aside class="drawer"><div class="drawerhead"><h2>YOUR SHOPPING BAG</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartitems"></div><div class="total"><span>Total</span><span id="total">R0.00</span></div><button class="wide" onclick="checkout()">CHECKOUT VIA WHATSAPP ↗</button><p class="muted">WhatsApp ordering is activated after you add your store number in the script.</p></aside></div>
+<div class="modal" id="modal"><div class="modalbox"><button class="close" style="float:right" onclick="closeModal()">×</button><h2 id="modalname">Product</h2><div id="modalprice" style="color:var(--lime);font-weight:900"></div><label>Choose size</label><select id="size"></select><label>Quantity</label><input id="qty" type="number" min="1" value="1"><br><br><button class="wide" onclick="addToCart()">ADD TO BAG</button></div></div>
+<script>
+const items=[
+{id:1,name:"N_A Signature Tee",cat:"T-Shirts",price:299.99,img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85",tag:"NEW"},
+{id:2,name:"Neon Logo Tee",cat:"T-Shirts",price:279.99,img:"https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=700&q=85",tag:"BEST SELLER"},
+{id:3,name:"Crown Graphic Tee",cat:"T-Shirts",price:299.99,img:"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85",tag:"NEW"},
+{id:4,name:"N_A Essential Cap",cat:"Hats",price:189.99,img:"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=700&q=85",tag:"N_A PICK"},
+{id:5,name:"Shadow Street Cap",cat:"Hats",price:199.99,img:"https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85",tag:"LIMITED"},
+{id:6,name:"Utility Cargo Trousers",cat:"Trousers",price:499.99,img:"https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=85",tag:"NEW"},
+{id:7,name:"Wide-Leg Street Trousers",cat:"Trousers",price:459.99,img:"https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=700&q=85",tag:"TRENDING"}
+];
+let category="All",cart=[],wishlist=[],chosen=null,onlyWish=false;
+const fmt=n=>"R"+n.toFixed(2);
+function render(){let q=document.getElementById('search').value.toLowerCase();let list=items.filter(p=>(category==='All'||p.cat===category)&&(!onlyWish||wishlist.includes(p.id))&&(p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));document.getElementById('heading').textContent=onlyWish?'My Wishlist':category==='All'?'Featured Collection':category;document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.cat===category));document.getElementById('products').innerHTML=list.length?list.map(p=>`<article class="product"><div class="photo"><img src="${p.img}" alt="${p.name}"><span class="tag">${p.tag}</span><button class="heart ${wishlist.includes(p.id)?'on':''}" onclick="toggleWish(${p.id})">${wishlist.includes(p.id)?'♥':'♡'}</button></div><div class="pinfo"><div class="pname">${p.name}</div><div class="price-line"><span class="price">${fmt(p.price)}</span><button class="add" onclick="openProduct(${p.id})">＋ ADD</button></div></div></article>`).join(''):'<div class="empty">No products found in this collection yet.</div>'}
+function showCategory(c){category=c;onlyWish=false;render();document.getElementById('shop').scrollIntoView({behavior:'smooth'})}
+function setNav(el){document.querySelectorAll('.bottom button').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
+function toggleWish(id){wishlist.includes(id)?wishlist=wishlist.filter(x=>x!==id):wishlist.push(id);render()}
+function showWishlist(){onlyWish=true;category='All';render();document.getElementById('shop').scrollIntoView({behavior:'smooth'})}
+function focusSearch(){document.getElementById('search').focus();window.scrollTo({top:0,behavior:'smooth'})}
+function openProduct(id){chosen=items.find(p=>p.id===id);document.getElementById('modalname').textContent=chosen.name;document.getElementById('modalprice').textContent=fmt(chosen.price);document.getElementById('size').innerHTML=(chosen.cat==='Hats'?['One Size']:['S','M','L','XL','XXL']).map(s=>`<option>${s}</option>`).join('');document.getElementById('qty').value=1;document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function addToCart(){let size=document.getElementById('size').value,qty=Math.max(1,parseInt(document.getElementById('qty').value)||1),existing=cart.find(x=>x.id===chosen.id&&x.size===size);existing?existing.qty+=qty:cart.push({...chosen,size,qty});closeModal();updateCart();openCart()}
+function updateCart(){document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartitems').innerHTML=cart.length?cart.map((p,i)=>`<div class="cartrow"><img src="${p.img}"><div><b>${p.name}</b><p class="muted">Size ${p.size} · Qty ${p.qty}<br>${fmt(p.price*p.qty)}</p><button onclick="removeItem(${i})" style="background:none;border:0;color:#ff8b8b;font-size:10px">REMOVE</button></div></div>`).join(''):'<p class="muted">Your bag is empty. Explore the collections to find your next fit.</p>';document.getElementById('total').textContent=fmt(cart.reduce((s,x)=>s+x.price*x.qty,0))}
+function removeItem(i){cart.splice(i,1);updateCart()}
+function openCart(){document.getElementById('cart').classList.add('open');updateCart()}
+function closeCart(){document.getElementById('cart').classList.remove('open')}
+function checkout(){if(!cart.length){alert('Your bag is empty.');return}const phone='27XXXXXXXXX';if(phone.includes('X')){alert('Add your WhatsApp number in the checkout function first.');return}let text='Hello, I would like to order:%0A'+cart.map(x=>`${x.name} / ${x.size} / Qty ${x.qty} / ${fmt(x.price*x.qty)}`).join('%0A')+'%0ATotal: '+fmt(cart.reduce((s,x)=>s+x.price*x.qty,0));window.open('https://wa.me/'+phone+'?text='+text,'_blank')}
+render();updateCart();
+</script></body></html>
