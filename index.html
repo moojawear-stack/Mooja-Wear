@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="NEON APOCALYPSE — heavyweight streetwear, oversized cuts and limited drops.">
+  <title>NEON APOCALYPSE // N_A LABS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">LIMITED DROP_01 — BUILT FOR THE CONCRETE UNDERGROUND</div>
+  <header class="navbar">
+    <a class="logo" href="#" aria-label="N A Labs home">N_A <span>// LABS</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#shop">DROP_01</a><a href="#about">THE UNIFORM</a><a href="#footer">CONTACT</a>
+    </nav>
+    <button class="cart-status" id="cart-toggle" aria-label="Open shopping bag">BAG <span id="cart-count">0</span> <span class="bag-icon">↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><i></i> NEW SEASON // DROP_01</span>
+        <h1>REBEL AGAINST<br><span class="glitch-text">THE ORDINARY.</span></h1>
+        <p>Heavyweight essentials. Oversized silhouettes.<br>Made for those who move differently.</p>
+        <a href="#shop" class="btn-primary">EXPLORE THE DROP <span>↘</span></a>
+      </div>
+      <div class="hero-stamp">N_A<br><small>EST. 2026</small></div>
+      <div class="hero-bottom"><span>01 / 03 — CORE PIECES</span><span>DESIGNED TO DISRUPT.</span></div>
+    </section>
+
+    <div class="ticker-wrap" aria-label="Store announcements"><div class="ticker">
+      <span>LIMITED RUNS ONLY ✳</span><span>HEAVYWEIGHT STREETWEAR ✳</span><span>OWN YOUR DIFFERENCE ✳</span><span>LIMITED RUNS ONLY ✳</span><span>HEAVYWEIGHT STREETWEAR ✳</span>
+    </div></div>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><span class="eyebrow">// THE FIRST RELEASE</span><h2>[ CORE_PIECES ]</h2></div><p>THREE ESSENTIALS.<br>ZERO COMPROMISE.</p></div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="manifesto" id="about">
+      <span class="eyebrow">// OUR UNIFORM</span>
+      <h2>NOT MADE TO<br><span>BLEND IN.</span></h2>
+      <p>NEON APOCALYPSE is a streetwear concept built around bold graphics, considered details and everyday pieces with presence. Wear it your way.</p>
+    </section>
+  </main>
+
+  <footer id="footer"><a class="logo" href="#">N_A <span>// LABS</span></a><p>THE UNDERGROUND HAS A UNIFORM.</p><small>© 2026 NEON APOCALYPSE. ALL RIGHTS RESERVED.</small></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-header"><div><span class="eyebrow">// YOUR SELECTION</span><h2>[ YOUR_BAG ]</h2></div><button class="icon-btn" id="close-cart" aria-label="Close bag">✕</button></div>
+    <div class="cart-items" id="cart-items-container"><p class="empty-message">Your bag is currently empty.</p></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>SUBTOTAL</span><strong id="cart-total-price">R 0.00</strong></div>
+      <p class="shipping-note">Delivery costs, if applicable, will be confirmed when your order is arranged.</p>
+      <button class="checkout-btn" id="proceed-to-checkout-btn">CONTINUE TO CHECKOUT ↗</button>
+      <form id="checkout-form" class="checkout-form-container" hidden>
+        <div class="form-header"><h3>[ DELIVERY_DETAILS ]</h3><button type="button" class="text-btn" id="back-to-items-btn">← BACK TO BAG</button></div>
+        <label>FULL NAME<input type="text" id="cust-name" autocomplete="name" required placeholder="Your full name"></label>
+        <label>EMAIL ADDRESS<input type="email" id="cust-email" autocomplete="email" required placeholder="you@example.com"></label>
+        <label>PHONE NUMBER<input type="tel" id="cust-phone" autocomplete="tel" required placeholder="e.g. 071 234 5678"></label>
+        <label>DELIVERY ADDRESS<input type="text" id="cust-address" autocomplete="street-address" required placeholder="Street address and suburb"></label>
+        <div class="form-row-split"><label>CITY<input type="text" id="cust-city" autocomplete="address-level2" required placeholder="City"></label><label>POSTAL CODE<input type="text" id="cust-zip" autocomplete="postal-code" required placeholder="Postal code"></label></div>
+        <label>ORDER NOTES <textarea id="cust-notes" rows="2" placeholder="Optional delivery or order notes"></textarea></label>
+        <button type="submit" class="place-order-btn">SEND ORDER VIA WHATSAPP ↗</button>
+        <p class="secure-note">Your order summary will open in WhatsApp for confirmation. No online payment is taken on this demo store.</p>
+      </form>
+    </div>
+  </aside>
+
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal-content"><button class="close-modal" id="close-modal" aria-label="Close product details">✕</button>
+      <div class="modal-body-layout"><div class="modal-img-space" id="modal-image-wrap"></div>
+        <div class="modal-details-space"><span class="eyebrow">// SPEC_SHEET</span><h2 id="modal-product-title"></h2><p class="modal-price" id="modal-product-price"></p><p class="modal-desc" id="modal-product-desc"></p>
+          <label class="size-label">[ SELECT_SIZE ]</label><div class="size-options" id="size-options"></div>
+          <div class="quantity-row"><span>QUANTITY</span><div class="quantity-control"><button id="qty-minus" aria-label="Decrease quantity">−</button><span id="modal-qty">1</span><button id="qty-plus" aria-label="Increase quantity">+</button></div></div>
+          <button class="modal-action-btn" id="modal-add-to-bag">ADD TO BAG +</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
