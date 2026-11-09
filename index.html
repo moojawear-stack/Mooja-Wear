@@ -5,6 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEON APOCALYPSE // Streetwear</title>
     <link rel="stylesheet" href="style.css">
+        /* Add to Bag Button Styles */
+.add-to-cart-btn {
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: 1px dashed #444;
+    padding: 10px;
+    margin-top: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border-style: solid;
+}
+
+.cart-status {
+    cursor: pointer;
+}
+
+/* Sidebar Cart Framework */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -450px; /* Hidden offscreen by default */
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background-color: #0f0f0f;
+    border-left: 1px solid #222;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 30px;
+}
+
+/* Open state triggered via JavaScript */
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+}
+
+.cart-header h2 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.2rem;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: #888;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.close-cart:hover {
+    color: #fff;
+}
+
+/* Scrollable items space */
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.empty-message {
+    color: #555;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Single Cart item entry style */
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.cart-item-details h4 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.cart-item-details span {
+    color: #00ff66;
+    font-size: 0.9rem;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #ff3333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Cart Footer pricing panel */
+.cart-footer {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #00ff66;
+    color: #000;
+    border: none;
+    padding: 15px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #fff;
+}
+
+/* Visual Overlay dim screen effect */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
+    display: none;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
 </head>
 <body>
 
