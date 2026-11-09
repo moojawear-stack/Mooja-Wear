@@ -8,7 +8,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;padding-bottom:88px}button,input{font:inherit}button{cursor:pointer;color:inherit}
 .promo{text-align:center;background:var(--lime);color:#071000;font-size:10px;font-weight:900;letter-spacing:1.8px;padding:9px}
 header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #242924;position:sticky;top:0;background:#050605f2;backdrop-filter:blur(12px);z-index:5}
-.brand{font-weight:1000;font-style:italic;font-size:18px;letter-spacing:-.8px}.brand span{color:var(--lime)}.brand small{display:block;font-style:normal;color:var(--muted);font-size:8px;letter-spacing:4px;text-align:center;margin-top:3px}
+.brand{display:flex;align-items:center;min-width:0}.brand img{display:block;width:142px;height:49px;object-fit:contain;object-position:left center}
 .headbtn{background:none;border:0;font-size:23px;padding:8px;position:relative}.count{position:absolute;right:0;top:0;background:var(--lime);color:#071000;border-radius:20px;font-size:9px;font-weight:900;padding:3px 6px}
 .search-wrap{padding:13px 16px 4px}.search{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;color:white;padding:13px 15px 13px 42px;outline:none}.search-wrap{position:relative}.search-wrap:before{content:"⌕";position:absolute;left:30px;top:18px;font-size:23px;color:var(--muted)}
 .hero{margin:12px 14px 0;height:300px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(90deg,#030605df 0%,#03060560 58%,#03060512),url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=90') center/cover}
@@ -25,7 +25,7 @@ section{padding:25px 15px 0}.section-head{display:flex;align-items:center;justif
 </style></head>
 <body>
 <div class="promo">NEW DROP • FREE DELIVERY ON ORDERS OVER R1000</div>
-<header><div class="brand">N_A <span>NEON APOCALYPSE</span><small>C L O T H I N G&nbsp; C O.</small></div><div><button class="headbtn" onclick="focusSearch()" aria-label="Search">⌕</button><button class="headbtn" onclick="openCart()" aria-label="Cart">♧<b class="count" id="count">0</b></button></div></header>
+<header><a class="brand" href="#" aria-label="N_A Wear home"><img src="assets/na-logo.png" alt="N_A Wear logo"></a><div><button class="headbtn" onclick="focusSearch()" aria-label="Search">⌕</button><button class="headbtn" onclick="openCart()" aria-label="Cart">♧<b class="count" id="count">0</b></button></div></header>
 <div class="search-wrap"><input class="search" id="search" placeholder="Search T-shirts, hats, trousers..." oninput="render()"></div>
 <div class="hero"><div class="hero-copy"><div class="eyebrow">N_A LABS / NEW SEASON</div><h1>DRESS<br>DIFFERENT.<br><span>STAND OUT.</span></h1><p>Streetwear for those who make their own rules.</p><button class="shopbtn" onclick="showCategory('All')">SHOP THE DROP&nbsp; ↗</button></div><div class="dots"><i></i><i></i><i></i><i></i></div></div>
 <section><div class="section-head"><h2>Shop Categories</h2><button class="viewall" onclick="showCategory('All')">VIEW ALL ↗</button></div><div class="categories">
