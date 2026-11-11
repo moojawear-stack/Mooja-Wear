@@ -31,7 +31,7 @@ section{padding:25px 15px 0}.section-head{display:flex;align-items:center;justif
 <div class="hero"><div class="hero-copy"><div class="eyebrow">N_A LABS / NEW SEASON</div><h1>DRESS<br>DIFFERENT.<br><span>STAND OUT.</span></h1><p>Streetwear for those who make their own rules.</p><button class="shopbtn" onclick="showCategory('All')">SHOP THE DROP&nbsp; ↗</button></div><div class="dots"><i></i><i></i><i></i><i></i></div></div>
 <div class="deal-note"><b>EARLY BLACK FRIDAY DEAL</b><br>Buy any 2 or more T-shirts and get <b>10% off all T-shirts in your bag.</b> R500 tees become R450 each; R400 tees become R360 each.</div>
 <section><div class="section-head"><h2>Shop Categories</h2><button class="viewall" onclick="showCategory('All')">VIEW ALL ↗</button></div><div class="categories">
-<button class="category" onclick="showCategory('T-Shirts')"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"><span>T-SHIRTS<small>View collection →</small></span></button>
+<button class="category" onclick="showCategory('T-Shirts')"><img src="blackbikeskeletontee.jpg"><span>T-SHIRTS<small>View collection →</small></span></button>
 <button class="category coming" type="button"><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=500&q=80"><span>HATS<small>COMING SOON</small></span></button>
 <button class="category coming" type="button"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=500&q=80"><span>TROUSERS<small>COMING SOON</small></span></button>
 </div></section>
@@ -41,9 +41,9 @@ section{padding:25px 15px 0}.section-head{display:flex;align-items:center;justif
 <div class="modal" id="modal"><div class="modalbox"><button class="close" style="float:right" onclick="closeModal()">×</button><h2 id="modalname">Product</h2><div id="modalprice" style="color:var(--lime);font-weight:900"></div><label>Choose size</label><select id="size"></select><label>Quantity</label><input id="qty" type="number" min="1" value="1"><br><br><button class="wide" onclick="addToCart()">ADD TO BAG</button></div></div>
 <script>
 const items=[
-{id:1,name:"N_A Signature Tee",cat:"T-Shirts",price:500,img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85",tag:"R500 T-SHIRT"},
-{id:2,name:"Neon Logo Tee",cat:"T-Shirts",price:400,img:"https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=700&q=85",tag:"R400 T-SHIRT"},
-{id:3,name:"Crown Graphic Tee",cat:"T-Shirts",price:500,img:"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85",tag:"R500 T-SHIRT"}
+{id:1,name:"N_A Signature Tee",cat:"T-Shirts",price:500,img:"whitemojaafricanstreetweartee.jpg",tag:"R500 T-SHIRT"},
+{id:2,name:"Mini Logo Tee",cat:"T-Shirts",price:400,img:"blacksmalllogomtee.jpg",tag:"R400 T-SHIRT"},
+{id:3,name:"Clothes line Graphic Tee",cat:"T-Shirts",price:500,img:"whitemojaclotheslinetee.png",tag:"R500 T-SHIRT"}
 ];
 let category="All",cart=[],wishlist=[],chosen=null,onlyWish=false;
 const fmt=n=>"R"+n.toFixed(2);
