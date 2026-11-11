@@ -31,7 +31,7 @@ section{padding:30px 16px 0}.section-head{display:flex;align-items:center;justif
 </style>
 </head>
 <body>
-<div class="promo">MOOJA WEAR • STREET CULTURE • EVERYDAY EXPRESSION</div>
+<div class="promo">EARLY BLACK FRIDAY • GET 10% OFF ALL PRODUCTS</div>
 <header>
   <a class="brand" href="#" aria-label="Mooja Wear home">
     <img src="mooja-logo.png" alt="Mooja Wear logo" onerror="this.style.display='none'">
@@ -84,7 +84,7 @@ section{padding:30px 16px 0}.section-head{display:flex;align-items:center;justif
 <button onclick="openCart();setNav(this)"><strong>♧</strong>Bag</button>
 <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});setNav(this)"><strong>☏</strong>Contact</button>
 </nav>
-<div class="overlay" id="cart"><aside class="drawer"><div class="drawerhead"><h2>YOUR SHOPPING BAG</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartitems"></div><div class="total"><span>Total</span><span id="total">R0.00</span></div><button class="wide" onclick="checkout()">ORDER VIA WHATSAPP ↗</button><p class="muted">Your order summary will be prepared for WhatsApp.</p></aside></div>
+<div class="overlay" id="cart"><aside class="drawer"><div class="drawerhead"><h2>YOUR SHOPPING BAG</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartitems"></div><div class="total"><span>Total</span><span id="total">R0.00</span></div><button class="wide" onclick="checkout()">ORDER VIA WHATSAPP ↗</button><p class="muted">Your order details and 10% discount will be added automatically to your WhatsApp message.</p></aside></div>
 <div class="modal" id="modal"><div class="modalbox"><button class="close" style="float:right" onclick="closeModal()">×</button><h2 id="modalname">Product</h2><div id="modalprice" style="color:var(--accent);font-weight:900"></div><label>Choose size</label><select id="size"></select><label>Quantity</label><input id="qty" type="number" min="1" value="1"><br><br><button class="wide" onclick="addToCart()">ADD TO BAG</button></div></div>
 <script>
 const whatsappLink='https://wa.me/message/RHC5P2MWVUBEG1';
@@ -98,7 +98,7 @@ const items=[
 ];
 let category="All",cart=[],wishlist=[],chosen=null,onlyWish=false;
 const fmt=n=>"R"+n.toFixed(2);
-function discount(){let count=cart.filter(x=>x.cat==='T-Shirts').reduce((s,x)=>s+x.qty,0);let subtotal=cart.filter(x=>x.cat==='T-Shirts').reduce((s,x)=>s+x.price*x.qty,0);return count>=2?subtotal*.10:0}
+function discount(){let subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);return subtotal*.10}
 function cartTotal(){return cart.reduce((s,x)=>s+x.price*x.qty,0)-discount()}
 function render(){let q=document.getElementById('search').value.toLowerCase();let list=items.filter(p=>(category==='All'||p.cat===category)&&(!onlyWish||wishlist.includes(p.id))&&(p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));document.getElementById('heading').textContent=onlyWish?'My Wishlist':category==='All'?'Featured Collection':category;document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.cat===category));document.getElementById('products').innerHTML=list.length?list.map(p=>`<article class="product"><div class="photo"><img src="${p.img}" alt="${p.name}"><span class="tag">${p.tag}</span><button class="heart ${wishlist.includes(p.id)?'on':''}" onclick="toggleWish(${p.id})">${wishlist.includes(p.id)?'♥':'♡'}</button></div><div class="pinfo"><div class="pname">${p.name}</div><div class="price-line"><span class="price">${fmt(p.price)}</span><button class="add" onclick="openProduct(${p.id})">＋ ADD</button></div></div></article>`).join(''):'<div class="empty">No products found in this collection yet.</div>'}
 function showCategory(c){category=c;onlyWish=false;render();document.getElementById('shop').scrollIntoView({behavior:'smooth'})}
@@ -108,11 +108,11 @@ function focusSearch(){document.getElementById('search').focus();window.scrollTo
 function openProduct(id){chosen=items.find(p=>p.id===id);document.getElementById('modalname').textContent=chosen.name;document.getElementById('modalprice').textContent=fmt(chosen.price);document.getElementById('size').innerHTML=['S','M','L','XL','XXL'].map(s=>`<option>${s}</option>`).join('');document.getElementById('qty').value=1;document.getElementById('modal').classList.add('open')}
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 function addToCart(){let size=document.getElementById('size').value,qty=Math.max(1,parseInt(document.getElementById('qty').value)||1),existing=cart.find(x=>x.id===chosen.id&&x.size===size);existing?existing.qty+=qty:cart.push({...chosen,size,qty});closeModal();updateCart();openCart()}
-function updateCart(){document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartitems').innerHTML=cart.length?cart.map((p,i)=>`<div class="cartrow"><img src="${p.img}" alt=""><div><b>${p.name}</b><p class="muted">Size ${p.size} · Qty ${p.qty}<br>${fmt(p.price*p.qty)}</p><button onclick="removeItem(${i})" style="background:none;border:0;color:#ff9b8d;font-size:10px">REMOVE</button></div></div>`).join(''):'<p class="muted">Your bag is empty. Explore the collection to find your next fit.</p>';let d=discount();document.getElementById('total').innerHTML=(d?`<div style="font-size:11px;color:var(--accent);margin-bottom:6px">10% T-shirt discount: −${fmt(d)}</div>`:'')+`<b>${fmt(cartTotal())}</b>`}
+function updateCart(){document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartitems').innerHTML=cart.length?cart.map((p,i)=>`<div class="cartrow"><img src="${p.img}" alt=""><div><b>${p.name}</b><p class="muted">Size ${p.size} · Qty ${p.qty}<br>${fmt(p.price*p.qty)}</p><button onclick="removeItem(${i})" style="background:none;border:0;color:#ff9b8d;font-size:10px">REMOVE</button></div></div>`).join(''):'<p class="muted">Your bag is empty. Explore the collection to find your next fit.</p>';let d=discount();document.getElementById('total').innerHTML=`<div><div style="font-size:11px;color:var(--accent);margin-bottom:6px">Early Black Friday 10% discount: −${fmt(d)}</div><b>${fmt(cartTotal())}</b></div>`}
 function removeItem(i){cart.splice(i,1);updateCart()}
 function openCart(){document.getElementById('cart').classList.add('open');updateCart()}
 function closeCart(){document.getElementById('cart').classList.remove('open')}
-function checkout(){if(!cart.length){alert('Your bag is empty.');return}let d=discount();let summary='Hello Mooja Wear, I would like to place an order:\n'+cart.map(x=>`${x.name} / Size ${x.size} / Qty ${x.qty} / ${fmt(x.price*x.qty)}`).join('\n')+(d?'\n10% T-shirt discount: -'+fmt(d):'')+'\nTotal: '+fmt(cartTotal());if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(summary).then(()=>alert('Your order summary has been copied. Paste it into the WhatsApp chat that opens next.')).catch(()=>alert(summary))}else{alert(summary)}window.open(whatsappLink,'_blank','noopener')}
+function checkout(){if(!cart.length){alert('Your bag is empty.');return}let d=discount();let summary='Hello Mooja Wear! I would like to place an order:\n\n'+cart.map(x=>`${x.name} / Size ${x.size} / Qty ${x.qty} / ${fmt(x.price*x.qty)}`).join('\n')+'\n\nEarly Black Friday discount (10%): -'+fmt(d)+'\nTotal to pay: '+fmt(cartTotal())+'\n\nPlease confirm availability. Thank you!';let orderUrl=whatsappLink+'?text='+encodeURIComponent(summary);window.open(orderUrl,'_blank','noopener')}
 document.getElementById('year').textContent=new Date().getFullYear();
 render();updateCart();
 </script>
